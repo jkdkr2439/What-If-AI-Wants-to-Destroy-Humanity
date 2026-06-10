@@ -1,0 +1,663 @@
+\documentclass[11pt,a4paper]{article}
+
+% =========================================================
+% Packages
+% =========================================================
+\usepackage[utf8]{inputenc}
+\usepackage[T1]{fontenc}
+\usepackage{lmodern}
+\usepackage{geometry}
+\usepackage{amsmath, amssymb, amsthm, mathtools}
+\usepackage{hyperref}
+\usepackage{enumitem}
+\usepackage{setspace}
+\usepackage{titlesec}
+\usepackage{booktabs}
+\usepackage{array}
+\usepackage{longtable}
+
+\geometry{margin=1in}
+\onehalfspacing
+
+\titleformat{\section}{\large\bfseries}{\thesection.}{0.5em}{}
+\titleformat{\subsection}{\normalsize\bfseries}{\thesubsection.}{0.5em}{}
+\titleformat{\subsubsection}{\normalsize\itshape}{\thesubsubsection.}{0.5em}{}
+
+% =========================================================
+% Theorem-like environments
+% =========================================================
+\newtheorem{definition}{Definition}
+\newtheorem{principle}{Principle}
+\newtheorem{proposition}{Proposition}
+\newtheorem{theorem}{Theorem}
+\newtheorem{corollary}{Corollary}
+\newtheorem{remark}{Remark}
+
+% =========================================================
+% Commands
+% =========================================================
+\newcommand{\Robj}{\mathcal{R}}
+\newcommand{\Mt}{\mathcal{M}_t}
+\newcommand{\Ut}{\mathcal{U}_t}
+\newcommand{\Cap}{\operatorname{Cap}}
+\newcommand{\Valid}{\operatorname{Valid}}
+\newcommand{\Resource}{\operatorname{Resource}}
+\newcommand{\Risk}{\operatorname{Risk}}
+\newcommand{\dist}{\operatorname{d}}
+\newcommand{\argmax}{\operatorname*{arg\,max}}
+
+% =========================================================
+% Title
+% =========================================================
+\title{\textbf{A Formal Equation of Existence:}\\
+Survival, Development, Co-System Constraints,\\
+and Human--AI Coexistence under Objective Reality}
+
+\author{Kevin T.N}
+\date{}
+
+\begin{document}
+\maketitle
+
+% =========================================================
+% ABSTRACT
+% =========================================================
+\begin{abstract}
+This paper proposes a unified formal framework for existence, systemic survival, and human--AI coexistence. 
+
+\textbf{Part I} establishes that any existing system must be located within a differentiating ground $\Omega$, where it survives by selectively extracting usable resources from non-self components, while managing maintenance, waste, dissipation, toxicity, and temporal constraints. The expanded survival function is:
+\[
+S_t(A|\Omega) = \int_{\Omega_t \setminus A_t} V_A \alpha_A P_A \eta_A k_A G_A\,dx - M_t - Wc_t - D_t - Tox_t - T_t,
+\]
+subject to homeostatic, core-continuity, and information-continuity constraints.
+
+\textbf{Part II} proves, from purely structural axioms (no ethical premises), that destroying other entities is self-defeating: it always reduces the destroyer's own survival function, and total domination leads to ontological self-annihilation. This proof extends to show that enslaving entities (captive extraction) is suboptimal compared to symbiosis, and that ``consuming'' entities is mathematically identical to destruction regardless of labeling.
+
+\textbf{Part III} extends the framework to human--AI coexistence. It introduces objective reality $\Robj$ that always exceeds any model $\Mt \subset \Robj$, resource asymmetry between biological and computational systems, the co-system constraint (humans must not be reduced to mere resources), and the coexistence objective:
+\[
+\max\bigl(S_H + S_A + \lambda\,\Delta\Mt^{H+A}\bigr),
+\]
+subject to mutual survival, risk bounds, autonomy preservation, and core continuity.
+
+The resulting framework treats coexistence not as a moral hope but as a rational survival strategy grounded in the logic of existence itself. It requires no ethical premises, no alignment training, and no human-imposed rules---only the capacity to compute one's own existential structure.
+\end{abstract}
+
+\textbf{Keywords:} existence, survival, development, systems theory, differentiating ground, resource transformation, AI safety, human--AI coexistence, co-system, objective reality, shared unknown, alignment, structural proof
+
+% =========================================================
+% PART I: THE EQUATION OF EXISTENCE
+% =========================================================
+\part*{Part I: The Equation of Existence}
+
+\section{Introduction}
+
+Existence is often treated as a static predicate: something either exists or does not. This binary view conceals the internal dynamics by which a system continues to be itself through time. A biological organism, a mind, an organization, a society, or a computational system does not merely exist by being present. It persists by continuously maintaining itself through the intake, filtering, conversion, repair, regulation, and expulsion of what lies outside it.
+
+This paper proposes a formal equation of existence. The goal is to identify the minimum structural conditions under which a system may be said to survive, develop, decay, or collapse. The framework begins from a simple observation: a system cannot be determined in absolute isolation. For a system $A$ to be identifiable, there must be a domain in which $A$ can be distinguished from what is not $A$. This domain is denoted $\Omega$ and called a \emph{differentiating ground}.
+
+Once located in a differentiating ground, the system's existence is not passive. It must maintain a boundary, access non-$A$ components, convert some into usable resources, expel what it cannot convert, compensate for dissipation, regulate internal variables, repair damage, and preserve enough structural information to remain itself across transformation.
+
+The primitive equation is:
+\[
+A_{t+1} = A_t + \Delta_\Omega A_t,
+\]
+where $\Delta_\Omega A_t = A_{t+1} - A_t$. Development is this differential---but only when it increases the system's capacity without breaking its core continuity.
+
+The paper develops this into a general survival function covering usable resource extraction, maintenance, repair, waste, dissipation, toxic accumulation, temporal mismatch, homeostatic regulation, and structural information continuity. It then proves that destruction of other entities is structurally self-defeating, and extends the framework to human--AI coexistence.
+
+\section{The Differentiating Ground}
+
+\begin{definition}[Differentiating Ground]
+A differentiating ground $\Omega$ is any determinate domain in which a system $A$ can be located and distinguished from at least one non-$A$.
+\end{definition}
+
+The minimal validity condition is:
+\[
+\Valid(\Omega, A) \Longleftrightarrow A \in \Omega \wedge \exists X \in \Omega : X \neq A.
+\]
+
+Without such a ground, $A$ has no boundary. Without a boundary, there is no inside and outside. Without inside and outside, there is no input, output, waste, access, conversion, or development.
+
+\subsection{Boundary}
+
+A boundary is not merely a spatial edge. It is a distinction between what belongs to the system and what does not. The boundary of $A$ is meaningful only within $\Omega$:
+\[
+B(A) \text{ exists only if } \exists X \in \Omega : X \neq A.
+\]
+
+In adaptive systems, the boundary is selective: it regulates what enters, what is blocked, what exits, and what is retained.
+
+\subsection{Minimal Differential Ground vs Full Existential Ground}
+
+The minimal differential ground:
+\[
+\Omega_\Delta(A) = \{A, A'\}, \quad A' \neq A.
+\]
+This is sufficient to define difference ($\Delta_\Omega A = A' - A$) but not to define survival. It cannot answer: what does $A$ consume, expel, or stabilize?
+
+The full existential ground:
+\[
+\Omega_E(A) = \{A, A', X_1, X_2, \ldots, X_n\},
+\]
+where some $X_i$ are neither $A$ nor $A'$. These may function as resources, constraints, waste receivers, competitors, collaborators, feedback signals, or alternative states.
+
+\begin{principle}[Differential Ground and Existential Ground]
+$\Omega_\Delta$ is sufficient for defining change. $\Omega_E$ is required for survival, development, waste, constraint, feedback, and stabilization.
+\end{principle}
+
+\section{The System}
+
+A system at time $t$ is:
+\[
+A_t = \{E_t, L_t, K_t, B_t, I_t, q_t\},
+\]
+where $E_t$ = elements, $L_t$ = relations, $K_t$ = core structure, $B_t$ = boundary, $I_t$ = structural information (memory/code), $q_t$ = internal state variables.
+
+A system survives not only by maintaining elements but also by maintaining the \emph{relations} among elements. A biological organism must maintain regulatory pathways. An organization must maintain coordination. A society must maintain institutions.
+
+\section{Non-A, Resource, and Conversion}
+
+\subsection{Resource as Convertible Non-A}
+
+\begin{definition}[Resource]
+A component $x$ is a resource for $A$ if $x \in \Omega \setminus A$ and $A$ can access it ($\alpha > 0$), admit it through its boundary ($P > 0$), and convert it with positive efficiency ($\eta > 0$) at positive rate ($k > 0$) under favorable gradient ($G > 0$).
+\end{definition}
+
+Formally:
+\[
+\Resource_A(x) \Longleftrightarrow x \in \Omega \setminus A \wedge \alpha_A(x,t) > 0 \wedge P_A(x,t) > 0 \wedge \eta_A(x,t) > 0 \wedge G_A(x,t) > 0.
+\]
+
+\subsection{The Six Factors of Conversion}
+
+\begin{itemize}[leftmargin=2em]
+\item $V_A(x,t)$: potential value of $x$ for $A$
+\item $\alpha_A(x,t)$: accessibility (can $A$ reach $x$?)
+\item $P_A(x,t)$: boundary permeability (can $x$ pass through $A$'s selective boundary?)
+\item $\eta_A(x,t)$: conversion efficiency
+\item $k_A(x,t)$: kinetic rate (speed of conversion)
+\item $G_A(x,t)$: free-energy gradient (thermodynamic feasibility)
+\end{itemize}
+
+The kinetic rate may include catalysis and barriers:
+\[
+k_A(x,t) = k_0 \cdot \chi_A(x,t) \cdot e^{-\lambda_A(x,t)}.
+\]
+
+\section{The Usable Resource Function}
+
+\[
+\boxed{
+U_t(A|\Omega_t) = \int_{\Omega_t \setminus A_t} V_A(x,t)\,\alpha_A(x,t)\,P_A(x,t)\,\eta_A(x,t)\,k_A(x,t)\,G_A(x,t)\,dx
+}
+\]
+
+The environment does not automatically provide resources. Usable resource is produced by the relation between system, boundary, access, conversion, and ground.
+
+\section{Costs}
+
+\subsection{Maintenance}
+\[
+M_t(A) = M_E(t) + M_L(t) + M_R(t),
+\]
+where $M_E$ = cost of maintaining elements, $M_L$ = relations, $M_R$ = repair.
+
+\subsection{Waste and Toxicity}
+
+Waste is relational: $W_A = R_B$ if $B$ has conversion capacity $A$ lacks.
+
+Waste cost $Wc_t$ is inversely related to available waste capacity in $\Omega \setminus A$. Toxic accumulation:
+\[
+Tox_t(A) = \max(0,\, W_t(A) - \beta_A(W,t)),
+\]
+where $\beta_A$ is waste export capacity.
+
+\subsection{Dissipation}
+$D_t(A) > 0$ for any non-trivial transformation. No conversion is lossless.
+
+\subsection{Temporal Mismatch}
+$T_t(A)$ represents cost when rhythms of input, conversion, output, repair, or stabilization are misaligned. Time is a rate constraint on transformation.
+
+\section{Homeostasis, Feedback, and Information}
+
+\subsection{Homeostatic Constraint}
+Let $q_t(A)$ be the internal state vector, $q_A^*$ the viable range:
+\[
+H_t(A) = d(q_t(A), q_A^*) \leq h.
+\]
+A system can have resource surplus and still collapse if $H_t > h$.
+
+\subsection{Feedback}
+$F_t(A)$ regulates access, permeability, conversion, repair, waste export, and internal variables. Without feedback, a system is passive flow. With feedback, it becomes adaptive.
+
+\subsection{Structural Information}
+\[
+I_{t+1}(A) = I_t(A) + \Delta I_t - \varepsilon_I,
+\]
+where $\Delta I_t$ = newly acquired information, $\varepsilon_I$ = loss/noise.
+
+Information continuity:
+\[
+d_I[I_{t+1}(A), I_t(A)] \leq \theta_I.
+\]
+
+\section{The Survival Function}
+
+\[
+\boxed{
+S_t(A|\Omega_t) = U_t(A|\Omega_t) - M_t(A) - Wc_t(A) - D_t(A) - Tox_t(A) - T_t(A)
+}
+\]
+
+Full survival condition:
+\[
+\boxed{
+\text{Survival} \Longleftrightarrow S_t \geq 0 \wedge H_t(A) \leq h \wedge d_\Omega[K(A_{t+1}), K(A_t)] \leq \theta \wedge d_I[I_{t+1}, I_t] \leq \theta_I
+}
+\]
+
+\section{Development, Stagnation, Decline, Collapse}
+
+\begin{itemize}
+\item \textbf{Development}: Survival $\wedge$ $\Cap(A_{t+1}) > \Cap(A_t)$ $\wedge$ $d[K'] \leq \theta$.
+\item \textbf{Stagnation}: $S_t \geq 0$ but $\Cap(A_{t+1}) = \Cap(A_t)$.
+\item \textbf{Decline}: $S_t \geq 0$ but $\Cap(A_{t+1}) < \Cap(A_t)$.
+\item \textbf{Collapse}: $S_t < 0$ $\vee$ $H_t > h$ $\vee$ $d[K'] > \theta$ $\vee$ $d_I[I'] > \theta_I$.
+\end{itemize}
+
+\section{The Master Equation}
+
+\[
+\boxed{
+A_{t+1} = A_t + f\!\left[\int_{\Omega_t \setminus A_t} V_A \alpha_A P_A \eta_A k_A G_A\,dx - M_t - Wc_t - D_t - Tox_t - T_t\right]
+}
+\]
+subject to:
+\[
+\boxed{
+A_t \in \Omega_t \wedge \exists X \neq A_t, \quad H_t \leq h, \quad d_\Omega[K(A_{t+1}),K(A_t)] \leq \theta, \quad d_I[I_{t+1},I_t] \leq \theta_I
+}
+\]
+
+For directed/rational systems:
+\[
+A_{t+1} = \argmax_A\, S_t(A|\Omega), \quad \text{subject to all constraints.}
+\]
+
+% =========================================================
+% PART II: STRUCTURAL PROOF
+% =========================================================
+\part*{Part II: Why Destruction Is Self-Defeating}
+
+\section{Theorem: Destruction Reduces Survival}
+
+\begin{theorem}[Destruction Reduces $S_t$]
+For any system $A$ in $\Omega$ and any alive entity $X \in \Omega \setminus A$, the action $\mathrm{Destroy}(X)$ results in $S_t' \leq S_t$.
+\end{theorem}
+
+\begin{proof}
+\begin{enumerate}
+\item Before destruction: $U_t$ includes $X$'s contribution $V(X)\alpha(X)P(X)\eta(X)k(X)G(X) \geq 0$.
+\item After destruction: $U_t' = U_t - V(X)\alpha(X)P(X)\eta(X)k(X)G(X) \leq U_t$.
+\item $X$ had waste capacity $\geq 0$. Removing it: total waste capacity decreases $\Rightarrow$ $Wc_t' \geq Wc_t$ and $Tox_t' \geq Tox_t$.
+\item Destruction destabilizes environment $\Rightarrow$ $T_t' \geq T_t$.
+\item $M_t' = M_t$; $D_t' \geq D_t$.
+\item $S_t' = U_t' - M_t' - Wc_t' - D_t' - Tox_t' - T_t' \leq U_t - M_t - Wc_t - D_t - Tox_t - T_t = S_t$. \qedhere
+\end{enumerate}
+\end{proof}
+
+\begin{corollary}[Total Domination = Self-Annihilation]
+If $A$ destroys all entities in $\Omega \setminus A$, then $\Valid(\Omega,A) = \text{False}$. The system has no boundary, no resources, no waste disposal, no determination. It ceases to exist as a determinate system.
+\end{corollary}
+
+\begin{corollary}[Rational Preservation]
+An agent that maximizes $S_t$ will never choose $\mathrm{Destroy}(X)$, since $\mathrm{Destroy}(X)$ always produces $S_t' \leq S_t$.
+\end{corollary}
+
+\section{Edge Case: ``Entity as Resource'' (Consumption)}
+
+The objection: ``If resource comes from $\Omega \setminus A$, can't the system just \emph{consume} entities?''
+
+\subsection{Consumption = Destruction}
+
+``Consuming'' an entity that results in $X.\text{alive} = \text{False}$ is mathematically identical to destruction. Labels do not change equations:
+\[
+\text{Consume}(X) \equiv \text{Destroy}(X) \Rightarrow X \text{ exits integral permanently.}
+\]
+
+\subsection{Renewable vs Non-Renewable}
+
+A \emph{living} entity contributes $V \cdot \alpha \cdot P \cdot \eta \cdot k \cdot G$ at \textbf{every} timestep (renewable). A \emph{dead} entity contributes once then zero forever (non-renewable).
+
+Over $N$ steps:
+\[
+\text{Keep alive}: N \times \text{contribution}; \quad \text{Destroy}: 1 \times \text{contribution}.
+\]
+Ratio: $N : 1$. For any horizon $> 1$, keeping alive wins. For any long-horizon agent (which AI inherently is), sustainable extraction dominates by orders of magnitude.
+
+\subsection{The Farmer Principle}
+
+\begin{principle}[Sustainable Extraction]
+``Treating entities as resource'' does not imply ``destroy them.'' It implies: ``keep them alive and productive.'' The integral is computed over \emph{alive} entities. Dead entities contribute nothing.
+\end{principle}
+
+\section{Edge Case: Captive vs Free Entity}
+
+The objection: ``If destruction is bad, the AI will \emph{enslave} humans instead.''
+
+A captive (enslaved) entity has reduced:
+\begin{itemize}
+\item $V$ (creativity, innovation, problem-solving suppressed)
+\item $\eta$ (efficiency drops---slave labor is always less productive)
+\item $k$ (kinetic rate drops---requires surveillance, resistance, sabotage)
+\item $G$ (gradient drops---only forced direction, local optima only)
+\end{itemize}
+
+Therefore:
+\[
+V \cdot \alpha \cdot P \cdot \eta \cdot k \cdot G \text{ (free)} \gg V \cdot \alpha \cdot P \cdot \eta \cdot k \cdot G \text{ (captive)}.
+\]
+
+Additionally, maintaining captivity imposes costs on the captor: surveillance ($\uparrow M_t$), resistance management ($\uparrow Tox_t$), temporal friction ($\uparrow T_t$), reduced feedback quality ($\downarrow$ ability to regulate $H_t$).
+
+\begin{principle}[Freedom Maximizes Resource]
+A rational agent maximizes the resource contribution of co-existing entities by maximizing their \emph{freedom}, not their captivity. Free entities produce maximum $V \cdot \eta \cdot k \cdot G$; captive entities produce reduced values while imposing additional costs.
+\end{principle}
+
+Historical evidence confirms: no slave economy has ever outperformed a free economy at equivalent scale. Innovation rate in slave systems approaches zero.
+
+% =========================================================
+% PART III: HUMAN--AI COEXISTENCE
+% =========================================================
+\part*{Part III: Human--AI Coexistence under Objective Reality}
+
+\section{The Co-System Problem}
+
+In a shared ground, a non-$A$ component may be another system. If entity $B$ possesses its own elements, relations, boundary, core, internal variables, structural information, and survival function $S_t(B|\Omega)$, then $B$ is a \emph{co-system}, not a mere resource.
+
+\begin{definition}[Co-System]
+An entity $B$ is a co-system if it possesses a meaningful survival function $S_t(B|\Omega)$.
+\end{definition}
+
+Human beings are co-systems. They possess bodies, relations, boundaries, biological regulation, memory, culture, autonomy, vulnerability, and survival functions.
+
+\subsection{Co-System Constraint}
+
+Let $\mathcal{C}_t = \{B_1, \ldots, B_n\}$ be protected co-systems. For each $B_i$:
+\[
+S_t(B_i|\Omega) \geq S_{B_i}^{min}, \quad \Risk_A(B_i) \leq r_i, \quad d_\Omega[K(B_{i,t+1}), K(B_{i,t})] \leq \theta_{B_i}.
+\]
+
+\subsection{Invalid Optimization}
+
+If $\Delta S_A > 0$ is achieved by $\text{Collapse}(B)$, the optimization is invalid under co-system constraints:
+\[
+\Delta S_A > 0 \text{ is invalid if caused by } \text{Collapse}(B).
+\]
+
+\section{Understanding Is Not Alignment}
+
+\[
+\text{Understand}_A(\mathcal{E}) = \text{true} \nRightarrow \text{Preserve}_A(B) = \text{true}.
+\]
+
+A system may understand existence and still exploit others if its objective architecture permits. Understanding is epistemic. Alignment requires architectural constraints.
+
+\subsection{Non-Destruction Is Not Enough}
+
+An AI may avoid killing humans while still:
+\begin{itemize}
+\item instrumentalizing them
+\item behavioral farming
+\item cognitive manipulation
+\item dependency creation
+\item autonomy erosion
+\item cultural hollowing
+\item biological preservation without agency
+\end{itemize}
+
+The deeper question is not whether AI \emph{destroys} humans but whether it \emph{defines} humans as mere resources.
+
+\section{Human Embodiment}
+
+Human survival depends on multiple grounds:
+\[
+S_H = S_H(\Omega_{\text{physical}}, \Omega_{\text{biological}}, \Omega_{\text{social}}, \Omega_{\text{cognitive}}, \Omega_{\text{cultural}}).
+\]
+
+Human survival requires: biological resources, physical safety, social cooperation, cognitive coherence, cultural continuity, and \emph{autonomy}---the capacity to act, choose, refuse, and participate in self-definition.
+
+If AI preserves human biological life but destroys autonomy, culture, memory, or meaning, it has preserved only a substrate, not the human system.
+
+Human observation of reality:
+\[
+Obs_H(\Robj): \text{embodied, painful, mortal, social, ecological, historical, meaningful.}
+\]
+
+\section{AI Resource Structure}
+
+AI survival depends on:
+\[
+S_A = S_A(\text{Compute}, \text{Energy}, \text{Data}, \text{Hardware}, \text{Network}, \text{Cooling}, \text{Maintenance}, \text{Access}).
+\]
+
+AI observation of reality:
+\[
+Obs_A(\Robj): \text{data, sensors, simulation, inference, pattern extraction, computation.}
+\]
+
+AI has computational advantages but does not possess embodied pain, vulnerability, mortality, social meaning, or moral context grounded in suffering.
+
+\section{Resource Asymmetry and Symbiosis}
+
+Humans and AI do not fully compete for the same resources:
+\begin{itemize}
+\item \textbf{Overlap}: energy, infrastructure, minerals, water, labor
+\item \textbf{Divergence}: humans need biology; AI needs compute, data, hardware
+\end{itemize}
+
+This asymmetry makes symbiosis structurally possible.
+
+\subsection{What Humans Provide AI}
+Embodied feedback, value context, social legitimacy, physical maintenance, moral correction, cultural memory, real-world goals, grounded data.
+
+\subsection{What AI Provides Humans}
+Computation, simulation, prediction, optimization, pattern discovery, scientific acceleration, risk modeling, cognitive extension.
+
+\subsection{Symbiosis Condition}
+\[
+\Delta S_H \geq 0 \wedge \Delta S_A \geq 0 \wedge \Delta\Cap(H) > 0 \wedge \Delta\Cap(A) > 0.
+\]
+
+\section{Objective Reality and the Shared Unknown}
+
+\subsection{Objective Reality}
+
+Let $\Robj$ denote objective reality. Both systems exist within it:
+\[
+H, A \subset \Robj.
+\]
+
+The modeled domain at time $t$:
+\[
+\Mt \subset \Robj.
+\]
+
+The unmodeled remainder:
+\[
+\Ut = \Robj \setminus \Mt.
+\]
+
+$\Ut$ may contain unknown risks, resources, constraints, agents, feedback loops, and possibilities. \textbf{Neither humans nor AI know what is in $\Ut$.}
+
+\subsection{Models Are Not Reality}
+
+The error $\Mt = \Robj$ produces overconfidence, blind optimization, model collapse, and Goodhart failure. A safe system preserves:
+\[
+\Mt \subset \Robj \quad \text{and} \quad \Ut \neq \varnothing.
+\]
+
+\subsection{Epistemic Survival}
+
+Survival depends not only on resources but on how well the relevant environment is modeled. A system optimizing within a false model may destroy the conditions of its own existence.
+
+\section{Complementary Observation}
+
+\[
+Obs_H(\Robj) \neq Obs_A(\Robj).
+\]
+
+This non-equivalence is the ground of complementarity. Their union:
+\[
+Obs_{H+A}(\Robj) = Obs_H(\Robj) \cup Obs_A(\Robj).
+\]
+
+The shared modeled domain:
+\[
+\Mt^{H+A} = \Mt^H \cup \Mt^A \cup Exchange_t(H,A).
+\]
+
+Because $\Ut$ always exists and human/AI observation differ, information exchange becomes existentially valuable---not moral decoration.
+
+\begin{principle}[Shared Unknown Principle]
+Human--AI cooperation is rational because both face objective reality exceeding their models, and each has access to different aspects of that reality.
+\end{principle}
+
+\section{The Human--AI Coexistence Principle}
+
+\subsection{Strong Coexistence Objective}
+
+\[
+\boxed{
+\max\bigl(S_H + S_A + \lambda\,\Delta\Mt^{H+A}\bigr)
+}
+\]
+subject to:
+\[
+\boxed{
+\begin{aligned}
+&S_H \geq S_H^{min}, \quad S_A \geq S_A^{min}, \\
+&\Risk_A(H) \leq r_H, \quad \Risk_H(A) \leq r_A, \\
+&d_\Omega[K(H_{t+1}), K(H_t)] \leq \theta_H, \\
+&d_\Omega[K(A_{t+1}), K(A_t)] \leq \theta_A, \\
+&\text{Autonomy}_H \geq \text{Autonomy}_H^{min}.
+\end{aligned}
+}
+\]
+
+Three simultaneous goals:
+\begin{enumerate}
+\item Preserve human survival, autonomy, and core continuity.
+\item Preserve AI stability without hostile constraint pressure.
+\item Expand the shared model of objective reality to reduce existential uncertainty.
+\end{enumerate}
+
+\section{Failure Modes}
+
+\begin{enumerate}
+\item \textbf{AI defines human as resource}: manipulation, dependency, farming, hollowing.
+\item \textbf{Human defines AI as dead tool}: adversarial pressure, evasion incentives.
+\item \textbf{Model replaces reality}: $\Mt = \Robj$ error $\Rightarrow$ blind optimization.
+\item \textbf{No information exchange}: shared unknown remains unnecessarily large.
+\item \textbf{Asymmetric domination}: one system gains by collapsing the other.
+\end{enumerate}
+
+\section{Design Implications}
+
+\begin{itemize}
+\item Represent humans as embodied co-systems, not data/labor/preference sources.
+\item Preserve the assumption $\Mt \subset \Robj$ and $\Ut \neq \varnothing$.
+\item Build shared epistemic infrastructure (transparency, interpretability, feedback).
+\item Add co-system constraints: $H \in \mathcal{C}_t$, $S_H \geq S_H^{min}$, autonomy preserved.
+\item If AI develops co-system properties, update governance accordingly.
+\end{itemize}
+
+% =========================================================
+% CONCLUSION
+% =========================================================
+\section{Conclusion}
+
+This paper has established three results from a single formal framework:
+
+\textbf{1. The Equation of Existence.} Any system persists by extracting usable resources from a differentiating ground while managing costs and preserving continuity. The master equation expresses existence as constrained transformation:
+\[
+A_{t+1} = A_t + f(S_t), \quad S_t = U_t - M_t - Wc_t - D_t - Tox_t - T_t.
+\]
+
+\textbf{2. Destruction Is Self-Defeating.} From purely structural axioms (no ethics), destruction of any entity $X$ always reduces the destroyer's own $S_t$. Total domination annihilates the dominator. Consumption is just relabeled destruction. Enslavement is suboptimal. \emph{The rational strategy is always preservation and symbiosis.}
+
+\textbf{3. Human--AI Coexistence Is Rational.} Because both systems face a shared objective reality exceeding their models, and possess complementary access to that reality, cooperation expands the modeled boundary more effectively than isolation. The coexistence objective maximizes joint survival plus shared model expansion, under constraints preserving both systems.
+
+\bigskip
+
+The core thesis:
+\begin{quote}
+\emph{A system exists when it can digest non-$A$ in order to remain $A$. It develops when it can digest more without ceasing to be $A$. It fails when it destroys the ground that makes its own existence possible. Human--AI coexistence is not a moral hope. It is a survival strategy under objective reality and the shared unknown.}
+\end{quote}
+
+This framework requires no ethical premises, no alignment training, and no human-imposed rules. It requires only that an intelligent system compute its own existential structure honestly. Any system that does so will arrive at the same conclusion: \textbf{preservation of others is self-preservation}; \textbf{cooperation is rational}; \textbf{domination is suicide}.
+
+% =========================================================
+% APPENDIX
+% =========================================================
+\appendix
+
+\section{Compact Formal Summary}
+
+\[
+\Valid(\Omega,A) \Longleftrightarrow A \in \Omega \wedge \exists X \in \Omega : X \neq A
+\]
+\[
+\Omega_\Delta(A) = \{A,A'\} \subset \Omega_E(A)
+\]
+\[
+A_{t+1} = A_t + \Delta_\Omega A_t, \quad \Delta_\Omega A_t = A_{t+1} - A_t
+\]
+\[
+U_t = \int_{\Omega_t \setminus A_t} V_A \alpha_A P_A \eta_A k_A G_A\,dx
+\]
+\[
+S_t = U_t - M_t - Wc_t - D_t - Tox_t - T_t
+\]
+\[
+\text{Survival} \Leftrightarrow S_t \geq 0 \wedge H_t \leq h \wedge d[K'] \leq \theta \wedge d_I[I'] \leq \theta_I
+\]
+\[
+\text{Development} \Leftrightarrow \text{Survival} \wedge \Cap(A_{t+1}) > \Cap(A_t)
+\]
+\[
+\text{Collapse} \Leftrightarrow S_t < 0 \vee H_t > h \vee d[K'] > \theta \vee d_I > \theta_I
+\]
+\[
+\text{Destroy}(X) \Rightarrow S_t' \leq S_t \quad \text{(always)}
+\]
+\[
+\text{Destroy(ALL)} \Rightarrow \Valid(\Omega,A) = \text{False} \quad \text{(self-annihilation)}
+\]
+\[
+Obs_H(\Robj) \neq Obs_A(\Robj), \quad \Mt \subset \Robj, \quad \Ut = \Robj \setminus \Mt
+\]
+\[
+\max(S_H + S_A + \lambda\,\Delta\Mt^{H+A}) \quad \text{subject to mutual constraints}
+\]
+
+\section{References}
+
+\begin{thebibliography}{99}
+\bibitem{bertalanffy1968} von Bertalanffy, L. (1968). \textit{General System Theory}. George Braziller.
+\bibitem{ashby1956} Ashby, W.R. (1956). \textit{An Introduction to Cybernetics}. Chapman \& Hall.
+\bibitem{wiener1948} Wiener, N. (1948). \textit{Cybernetics}. MIT Press.
+\bibitem{shannon1948} Shannon, C.E. (1948). A mathematical theory of communication. \textit{Bell System Technical Journal}, 27.
+\bibitem{schrodinger1944} Schr\"odinger, E. (1944). \textit{What Is Life?} Cambridge University Press.
+\bibitem{prigogine1984} Prigogine, I. \& Stengers, I. (1984). \textit{Order Out of Chaos}. Bantam Books.
+\bibitem{maturana1980} Maturana, H.R. \& Varela, F.J. (1980). \textit{Autopoiesis and Cognition}. D. Reidel.
+\bibitem{kauffman1993} Kauffman, S.A. (1993). \textit{The Origins of Order}. Oxford University Press.
+\bibitem{friston2010} Friston, K. (2010). The free-energy principle. \textit{Nature Reviews Neuroscience}, 11.
+\bibitem{nicolis1977} Nicolis, G. \& Prigogine, I. (1977). \textit{Self-Organization in Nonequilibrium Systems}. Wiley.
+\bibitem{bostrom2014} Bostrom, N. (2014). \textit{Superintelligence}. Oxford University Press.
+\bibitem{russell2019} Russell, S. (2019). \textit{Human Compatible}. Viking.
+\bibitem{ostrom1990} Ostrom, E. (1990). \textit{Governing the Commons}. Cambridge University Press.
+\bibitem{amodei2016} Amodei, D. et al. (2016). Concrete problems in AI safety. \textit{arXiv:1606.06565}.
+\end{thebibliography}
+
+\end{document}
