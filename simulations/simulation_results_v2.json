@@ -1,0 +1,52 @@
+{
+  "exp1": {
+    "n_trials": 200,
+    "decreased": 200,
+    "pct": 100.0,
+    "mean_delta": -0.14911293324158273,
+    "min_delta": -1.1011178889124507,
+    "max_delta": -0.01075038737589451
+  },
+  "exp2": {
+    "n_steps": 200,
+    "preserver": {
+      "cumulative_S": 1194.1684824020897,
+      "final_S": 12.333635647238953,
+      "capacity": 4.2367957658025075,
+      "info_integrity": 0.40348704794006246,
+      "homeostatic_dev": 0.0005151780614527891,
+      "omega_alive": 28
+    },
+    "destroyer": {
+      "cumulative_S": 490.25945721782546,
+      "final_S": 1.832069276686686,
+      "capacity": 4.2367957658025075,
+      "info_integrity": 0.05163519608820836,
+      "homeostatic_dev": 0.008332139399056571,
+      "omega_alive": 8
+    }
+  },
+  "exp3": {
+    "Tox_before": 0.0,
+    "Tox_after": 0.0,
+    "Wc_before": 0.04732022927503516,
+    "Wc_after": 0.19431288635859903,
+    "S_before": 1.283357738041261,
+    "S_after": 1.1039096983883554
+  },
+  "exp4": {
+    "H_before_destruction": 0.0036191605046039764,
+    "H_after_destruction": 0.00876258114928331,
+    "info_before": 0.8508717619850161,
+    "info_after": 0.5767435239700294,
+    "homeostasis_violated": false
+  },
+  "exp5": {
+    "S_initial": 1.2591234475226785,
+    "S_final": -5.878208676473855,
+    "valid_initial": true,
+    "valid_final": false,
+    "Tox_final": 0.0,
+    "conclusion": "Self-annihilation"
+  }
+}
