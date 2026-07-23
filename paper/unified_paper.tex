@@ -3,11 +3,10 @@
 % =========================================================
 % Packages
 % =========================================================
-\usepackage[utf8]{inputenc}
 \usepackage[T1]{fontenc}
 \usepackage{lmodern}
 \usepackage{geometry}
-\usepackage{amsmath, amssymb, amsthm, mathtools}
+\usepackage{amsmath, amssymb, amsthm}
 \usepackage{hyperref}
 \usepackage{enumitem}
 \usepackage{setspace}
@@ -15,9 +14,18 @@
 \usepackage{booktabs}
 \usepackage{array}
 \usepackage{longtable}
+\usepackage{microtype}
 
 \geometry{margin=1in}
 \onehalfspacing
+\setlength{\emergencystretch}{3em}
+
+\hypersetup{
+colorlinks=true,
+linkcolor=black,
+citecolor=black,
+urlcolor=blue
+}
 
 \titleformat{\section}{\large\bfseries}{\thesection.}{0.5em}{}
 \titleformat{\subsection}{\normalsize\bfseries}{\thesubsection.}{0.5em}{}
@@ -29,8 +37,6 @@
 \newtheorem{definition}{Definition}
 \newtheorem{principle}{Principle}
 \newtheorem{proposition}{Proposition}
-\newtheorem{theorem}{Theorem}
-\newtheorem{corollary}{Corollary}
 \newtheorem{remark}{Remark}
 
 % =========================================================
@@ -39,73 +45,167 @@
 \newcommand{\Robj}{\mathcal{R}}
 \newcommand{\Mt}{\mathcal{M}_t}
 \newcommand{\Ut}{\mathcal{U}_t}
-\newcommand{\Cap}{\operatorname{Cap}}
+\newcommand{\OmegaT}{\Omega_t}
+\newcommand{\OmegaD}{\Omega_{\Delta}}
+\newcommand{\OmegaE}{\Omega_E}
+\newcommand{\At}{A_t}
+\newcommand{\Atn}{A_{t+1}}
+\newcommand{\DeltaA}{\Delta_{\Omega}A_t}
+\newcommand{\ST}{S_t}
+\newcommand{\UT}{U_t}
+\newcommand{\MT}{M_t}
+\newcommand{\Wct}{Wc_t}
+\newcommand{\Dt}{D_t}
+\newcommand{\Toxt}{Tox_t}
+\newcommand{\Tt}{T_t}
+\newcommand{\HtVar}{H_t}
+\newcommand{\It}{I_t}
+\newcommand{\CoSys}{\mathcal{C}_t}
+\newcommand{\ObsH}{Obs_H}
+\newcommand{\ObsA}{Obs_A}
+\newcommand{\ObsC}{\operatorname{Obs}_{\mathcal{C}}}
+\newcommand{\ObsB}{Obs_{B_i}}
+\newcommand{\SH}{S_H}
+\newcommand{\SA}{S_A}
+\newcommand{\SB}{S_{B_i}}
+\newcommand{\Capacity}{\operatorname{Cap}}
 \newcommand{\Valid}{\operatorname{Valid}}
 \newcommand{\Resource}{\operatorname{Resource}}
 \newcommand{\Risk}{\operatorname{Risk}}
+\newcommand{\Stability}{\operatorname{Stability}}
+\newcommand{\EcoStability}{\operatorname{EcoStability}}
+\newcommand{\Extinction}{\operatorname{Extinction}}
+\newcommand{\Exchange}{\operatorname{Exchange}}
 \newcommand{\dist}{\operatorname{d}}
 \newcommand{\argmax}{\operatorname*{arg\,max}}
 
 % =========================================================
 % Title
 % =========================================================
-\title{\textbf{A Formal Equation of Existence:}\\
-Survival, Development, Co-System Constraints,\\
-and Human--AI Coexistence under Objective Reality}
+\title{\textbf{The Formal Equation of Coexistence:}\\
+Existence, Human--AI Symbiosis, Multi-Species Reality-Access, and the Shared Objective Ground}
 
 \author{Kevin T.N}
+
 \date{}
 
 \begin{document}
+
 \maketitle
 
-% =========================================================
-% ABSTRACT
-% =========================================================
 \begin{abstract}
-This paper proposes a unified formal framework for existence, systemic survival, and human--AI coexistence. 
+This paper proposes a unified formal framework for existence, development, human--AI coexistence, and multi-species coexistence under objective reality. The central claim is that existence is not a static predicate, but a dynamic process by which a system maintains continuity through boundary, exchange, resource transformation, waste handling, dissipation control, homeostatic regulation, feedback, and structural information continuity. A system exists only within a differentiating ground, denoted by $\Omega$, in which it can be located, bounded, and distinguished from at least one non-system component.
 
-\textbf{Part I} establishes that any existing system must be located within a differentiating ground $\Omega$, where it survives by selectively extracting usable resources from non-self components, while managing maintenance, waste, dissipation, toxicity, and temporal constraints. The expanded survival function is:
+The primitive equation of existence is:
 \[
-S_t(A|\Omega) = \int_{\Omega_t \setminus A_t} V_A \alpha_A P_A \eta_A k_A G_A\,dx - M_t - Wc_t - D_t - Tox_t - T_t,
+A_{t+1}=A_t+\Delta_{\Omega}A_t,
 \]
-subject to homeostatic, core-continuity, and information-continuity constraints.
-
-\textbf{Part II} proves, from purely structural axioms (no ethical premises), that destroying other entities is self-defeating: it always reduces the destroyer's own survival function, and total domination leads to ontological self-annihilation. This proof extends to show that enslaving entities (captive extraction) is suboptimal compared to symbiosis, and that ``consuming'' entities is mathematically identical to destruction regardless of labeling.
-
-\textbf{Part III} extends the framework to human--AI coexistence. It introduces objective reality $\Robj$ that always exceeds any model $\Mt \subset \Robj$, resource asymmetry between biological and computational systems, the co-system constraint (humans must not be reduced to mere resources), and the coexistence objective:
+where:
 \[
-\max\bigl(S_H + S_A + \lambda\,\Delta\Mt^{H+A}\bigr),
+\Delta_{\Omega}A_t=A_{t+1}-A_t.
 \]
-subject to mutual survival, risk bounds, autonomy preservation, and core continuity.
+Development is not mere change or growth. It is the successful absorption of a differential into a new survival state with greater capacity and preserved core continuity.
 
-The resulting framework treats coexistence not as a moral hope but as a rational survival strategy grounded in the logic of existence itself. It requires no ethical premises, no alignment training, and no human-imposed rules---only the capacity to compute one's own existential structure.
+The framework is then extended to human--AI coexistence. Humans and artificial intelligence systems are not merely user and tool, master and servant, predator and prey, or competing resource agents. They are distinct co-systems inhabiting the same objective reality:
+\[
+H,A\subset\mathcal{R}.
+\]
+Humans are biologically embodied systems. They survive through direct physical experience, metabolism, vulnerability, pain, mortality, social dependence, ecological embeddedness, memory, meaning, and culture. AI systems are computational-infrastructural systems. They depend on compute, energy, data, memory, hardware, cooling, networks, maintenance, and access permissions. Their resource structures overlap in some domains, but diverge in many others. This resource asymmetry makes regulated symbiosis possible.
+
+Both humans and AI remain limited by a deeper epistemic condition: objective reality always exceeds the current modeled domain. Let $\mathcal{M}_t$ denote the domain of models, languages, measurements, instruments, theories, simulations, datasets, and formal tools available at time $t$. Then:
+\[
+\mathcal{M}_t\subset\mathcal{R}.
+\]
+The unmodeled remainder is:
+\[
+\mathcal{U}_t=\mathcal{R}\setminus\mathcal{M}_t.
+\]
+Because neither humans nor AI systems know in advance what risks, resources, constraints, or possibilities exist in $\mathcal{U}_t$, cooperation and information exchange become existential strategies rather than moral decorations.
+
+Finally, the paper extends the co-system logic beyond the human species. If humans should not be represented by AI merely as resources, then this logic cannot stop at humanity. Animals, plants, fungi, microbes, rivers, forests, oceans, soil systems, and ecological networks must also be examined as living or ecological co-systems with survival functions, boundaries, internal regulation, ecological roles, and species-specific modes of reality-access.
+
+The living world is not merely a resource field. It is a distributed field of reality-access. Biodiversity is therefore not only biological variety or ecological stock. It is also epistemic diversity: a plurality of embodied ways in which objective reality is sensed, filtered, tested, and responded to.
+
+Let the co-system network at time $t$ be:
+\[
+\mathcal{C}_t={H,A,B_1,B_2,\ldots,B_n},
+\]
+where $H$ denotes the human system, $A$ denotes the artificial intelligence system, and each $B_i$ denotes another biological or ecological co-system. The combined field of reality-access is:
+\[
+\operatorname{Obs}_{\mathcal{C}}(\mathcal{R})
+=
+Obs_H(\mathcal{R})
+\cup
+Obs_A(\mathcal{R})
+\cup
+\bigcup_{i=1}^{n}Obs_{B_i}(\mathcal{R}).
+\]
+The proposed coexistence objective is:
+\[
+\max
+\left(
+S_H
++
+S_A
++
+\sum_{i=1}^{n}w_iS_{B_i}
++
+\lambda\Delta\mathcal{M}^{\mathcal{C}}
+\right),
+\]
+subject to survival, risk, ecological stability, autonomy, core-continuity, information-continuity, and reality-access preservation constraints.
+
+The framework rejects both narrow human exceptionalism and false equality. Humans are distinctive because they transform embodied experience into symbolic models, culture, institutions, history, ethics, and reflective correction. But human distinctiveness does not imply that all other living systems are mere resources. The biosphere should be understood as a co-system network, an ecological stability layer, and a planetary-scale sensorium of objective reality.
 \end{abstract}
 
-\textbf{Keywords:} existence, survival, development, systems theory, differentiating ground, resource transformation, AI safety, human--AI coexistence, co-system, objective reality, shared unknown, alignment, structural proof
-
-% =========================================================
-% PART I: THE EQUATION OF EXISTENCE
-% =========================================================
-\part*{Part I: The Equation of Existence}
+\textbf{Keywords:} existence, survival, development, differentiating ground, resource transformation, human--AI coexistence, artificial intelligence, objective reality, shared unknown, co-system, biodiversity, epistemic diversity, reality-access, biosphere, systems theory
 
 \section{Introduction}
 
-Existence is often treated as a static predicate: something either exists or does not. This binary view conceals the internal dynamics by which a system continues to be itself through time. A biological organism, a mind, an organization, a society, or a computational system does not merely exist by being present. It persists by continuously maintaining itself through the intake, filtering, conversion, repair, regulation, and expulsion of what lies outside it.
+Existence is often treated as a static predicate. Something exists if it is present, detectable, or not absent. While this minimal meaning may be useful in ordinary language, it does not explain how a system continues to exist through time. A biological organism, a cell, a mind, a company, a society, an ecosystem, or a technological system does not merely exist by being present. It persists by continuously maintaining itself through the intake, filtering, conversion, repair, regulation, and expulsion of what lies outside it.
 
-This paper proposes a formal equation of existence. The goal is to identify the minimum structural conditions under which a system may be said to survive, develop, decay, or collapse. The framework begins from a simple observation: a system cannot be determined in absolute isolation. For a system $A$ to be identifiable, there must be a domain in which $A$ can be distinguished from what is not $A$. This domain is denoted $\Omega$ and called a \emph{differentiating ground}.
+This paper proposes a formal equation of coexistence. The aim is not to reduce all forms of existence to a single mechanical formula, but to build a general framework that identifies the minimum structural conditions under which a system may be said to survive, develop, decay, collapse, or coexist with other systems.
 
-Once located in a differentiating ground, the system's existence is not passive. It must maintain a boundary, access non-$A$ components, convert some into usable resources, expel what it cannot convert, compensate for dissipation, regulate internal variables, repair damage, and preserve enough structural information to remain itself across transformation.
+The framework begins from a simple observation: a system cannot be determined in absolute isolation. For a system $A$ to be identifiable, there must be a domain in which $A$ can be distinguished from what is not $A$. This domain is denoted by $\Omega$ and is called a differentiating ground.
+
+Once a system is located in a differentiating ground, its existence is not a passive fact. It must maintain a boundary, access non-$A$ components, convert some of them into usable resources, expel or neutralize what it cannot convert, compensate for dissipation, regulate internal variables, repair damage, and preserve enough structural information to remain itself across transformation.
 
 The primitive equation is:
 \[
-A_{t+1} = A_t + \Delta_\Omega A_t,
+A' = A + (A'-A).
 \]
-where $\Delta_\Omega A_t = A_{t+1} - A_t$. Development is this differential---but only when it increases the system's capacity without breaking its core continuity.
+In temporal form:
+\[
+A_{t+1}=A_t+\Delta_{\Omega}A_t,
+\]
+where:
+\[
+\Delta_{\Omega}A_t=A_{t+1}-A_t.
+\]
 
-The paper develops this into a general survival function covering usable resource extraction, maintenance, repair, waste, dissipation, toxic accumulation, temporal mismatch, homeostatic regulation, and structural information continuity. It then proves that destruction of other entities is structurally self-defeating, and extends the framework to human--AI coexistence.
+Here, $A_t$ is the current survival state of the system. $A_{t+1}$ is the next survival state after transformation. The differential $\Delta_{\Omega}A_t$ is development only if it increases the system's capacity without breaking its core continuity.
+
+This paper develops the framework in three stages.
+
+First, it presents a general equation of existence: differentiating ground, boundary, resource, conversion, waste, toxicity, dissipation, temporal mismatch, feedback, homeostasis, survival, development, stagnation, decline, and collapse.
+
+Second, it applies this framework to human--AI coexistence. The question of human--AI coexistence is often framed in narrow terms. Artificial intelligence is described as a tool for human use, a replacement for human labor, a threat to human survival, a system to be controlled, or a resource-optimizing agent that may eventually treat humanity as an obstacle. These framings each capture a partial truth, but they usually begin from the wrong question. The deeper question is whether humans and AI can be modeled as distinct co-systems inhabiting the same objective reality, each possessing different survival functions, resource structures, observational modes, and epistemic limits.
+
+Third, the paper extends the same logic to multi-species coexistence. If humans should not be reduced to mere resources by artificial intelligence, then the criterion cannot simply be ``being human.'' If the relevant criterion includes having a survival function, a boundary, internal regulation, environmental coupling, and a mode of access to objective reality, then many other living systems must also be reinterpreted. Animals, plants, fungi, microbes, and ecological networks are not merely background resources. They are living or ecological co-systems that sense, respond to, and transform the real through species-specific structures.
+
+The central thesis of the whole paper can be stated as follows:
+
+\begin{quote}
+Existence is the recursive process by which a system, located within a differentiating ground, selectively converts what is not itself into the means of continuing to be itself. Coexistence is the constrained relation among multiple systems that share a ground without reducing one another to mere resources.
+\end{quote}
+
+The paper proceeds as follows. Sections 2--13 build the formal equation of existence. Sections 14--23 extend the framework to human--AI coexistence. Sections 24--33 extend the framework to multi-species coexistence and reality-access diversity. Section 34 concludes. The appendices provide symbol tables, core principles, and a compact version of the master equations.
 
 \section{The Differentiating Ground}
+
+\subsection{The Need for a Ground}
+
+A system cannot be determined in an absolute void. In order for $A$ to be identified, there must be a domain in which $A$ can be located and distinguished from at least one non-$A$. This domain is not necessarily physical space. It may be a physical environment, a chemical reaction space, an ecological niche, a cognitive field, a linguistic system, a market, a social structure, a mathematical state space, or a space of possibilities.
 
 \begin{definition}[Differentiating Ground]
 A differentiating ground $\Omega$ is any determinate domain in which a system $A$ can be located and distinguished from at least one non-$A$.
@@ -113,551 +213,2406 @@ A differentiating ground $\Omega$ is any determinate domain in which a system $A
 
 The minimal validity condition is:
 \[
-\Valid(\Omega, A) \Longleftrightarrow A \in \Omega \wedge \exists X \in \Omega : X \neq A.
+\Valid(\Omega,A)
+\Longleftrightarrow
+A\in\Omega
+\wedge
+\exists X\in\Omega:X\neq A.
 \]
 
-Without such a ground, $A$ has no boundary. Without a boundary, there is no inside and outside. Without inside and outside, there is no input, output, waste, access, conversion, or development.
+This means that a ground is valid for $A$ if and only if $A$ is in the ground and there exists at least one distinguishable component in the same ground that is not $A$.
 
-\subsection{Boundary}
+Without such a ground, $A$ has no determinate boundary. Without a boundary, there is no inside and outside. Without inside and outside, there is no input, output, waste, access, conversion, or development. Therefore, existence does not begin merely with $A$; it begins with the condition under which $A$ can be distinguished from non-$A$.
 
-A boundary is not merely a spatial edge. It is a distinction between what belongs to the system and what does not. The boundary of $A$ is meaningful only within $\Omega$:
+\subsection{The Boundary Condition}
+
+A boundary is not merely a spatial edge. It is a distinction between what belongs to the system and what does not. Therefore, the boundary of $A$ is possible only within a differentiating ground.
+
+Let $B(A)$ denote the boundary of $A$. Then:
 \[
-B(A) \text{ exists only if } \exists X \in \Omega : X \neq A.
+B(A)\text{ is meaningful only if }\exists X\in\Omega:X\neq A.
 \]
 
-In adaptive systems, the boundary is selective: it regulates what enters, what is blocked, what exits, and what is retained.
+The boundary separates the system from non-systemic components, but it also mediates exchange. In simple systems, boundary may function primarily as distinction. In living and adaptive systems, boundary is selective: it regulates what enters, what is blocked, what exits, and what is retained.
 
-\subsection{Minimal Differential Ground vs Full Existential Ground}
+\subsection{Boundary as Selective Openness}
 
-The minimal differential ground:
+A system does not survive by being open to everything. Nor does it survive by being closed to everything. A fully closed system cannot access new resources or expel waste. A fully open system loses internal organization. Survival requires regulated exchange.
+
+Therefore, boundary should be understood as selective openness:
 \[
-\Omega_\Delta(A) = \{A, A'\}, \quad A' \neq A.
+Boundary = Distinction + Regulation + Exchange.
 \]
-This is sufficient to define difference ($\Delta_\Omega A = A' - A$) but not to define survival. It cannot answer: what does $A$ consume, expel, or stabilize?
 
-The full existential ground:
+A boundary must distinguish the system from its ground, but it must also determine what can enter, what must remain outside, what can leave, what must be retained, and what must be transformed before admission or expulsion.
+
+\section{Minimal Differential Ground and Full Existential Ground}
+
+\subsection{The Minimal Differential Ground}
+
+The smallest possible ground for difference contains $A$ and one distinguishable other. In the most reduced case, this other may be the system's own possible next state $A'$:
 \[
-\Omega_E(A) = \{A, A', X_1, X_2, \ldots, X_n\},
+\Omega_{\Delta}(A)={A,A'},\quad A'\neq A.
 \]
-where some $X_i$ are neither $A$ nor $A'$. These may function as resources, constraints, waste receivers, competitors, collaborators, feedback signals, or alternative states.
+
+This ground is sufficient to define difference:
+\[
+\Delta_{\Omega}A=A'-A.
+\]
+
+In temporal form:
+\[
+\Delta_{\Omega}A_t=A_{t+1}-A_t.
+\]
+
+Thus, $A'$ may function as a minimal non-$A$. It allows $A$ to be compared with another state. This is enough to define change, but it is not enough to define systemic existence.
+
+\subsection{The Limitation of the Binary Ground}
+
+If the entire ground is only:
+\[
+\Omega={A,A'},
+\]
+then the system is locked into a closed binary relation. It can distinguish $A$ from $A'$, but it cannot determine what $A$ consumes, what $A$ expels, what constrains $A$, what alternatives exist, what feedback is available, or whether $A'$ is viable.
+
+The binary ground allows the statement:
+\begin{quote}
+$A$ is different from $A'$.
+\end{quote}
+
+It does not answer:
+\begin{quote}
+What does $A$ live on? What does it convert? What does it reject? What limits it? What stabilizes $A'$? Is $A'$ a development, a deformation, or a collapse?
+\end{quote}
+
+Therefore, $A'$ is sufficient for minimal difference but insufficient for full existence.
+
+\subsection{The Full Existential Ground}
+
+A full existential ground must contain a richer field of non-$A$ components:
+\[
+\Omega_E(A)={A,A',X_1,X_2,\ldots,X_n},
+\]
+where at least some $X_i$ are neither $A$ nor $A'$.
+
+These components may function as resources, constraints, waste receivers, competitors, collaborators, signals, feedback channels, tools, alternative states, or destabilizing forces. Therefore:
+\[
+\Omega_{\Delta}(A)\subset\Omega_E(A).
+\]
 
 \begin{principle}[Differential Ground and Existential Ground]
-$\Omega_\Delta$ is sufficient for defining change. $\Omega_E$ is required for survival, development, waste, constraint, feedback, and stabilization.
+The minimal differential ground is sufficient for defining change. The full existential ground is required for defining survival, development, waste, constraint, feedback, and stabilization.
 \end{principle}
+
+In short, $A'$ is enough for $A$ to know that it can be different. It is not enough for $A$ to know what it survives on.
 
 \section{The System}
 
-A system at time $t$ is:
+\subsection{System Composition}
+
+Let a system at time $t$ be denoted by:
 \[
-A_t = \{E_t, L_t, K_t, B_t, I_t, q_t\},
+A_t.
 \]
-where $E_t$ = elements, $L_t$ = relations, $K_t$ = core structure, $B_t$ = boundary, $I_t$ = structural information (memory/code), $q_t$ = internal state variables.
 
-A system survives not only by maintaining elements but also by maintaining the \emph{relations} among elements. A biological organism must maintain regulatory pathways. An organization must maintain coordination. A society must maintain institutions.
+The system may be represented as:
+\[
+A_t={E_t,L_t,K_t,B_t,I_t,q_t},
+\]
+where:
+\begin{itemize}[leftmargin=2em]
+\item $E_t$ denotes the elements of the system;
+\item $L_t$ denotes the relations among elements;
+\item $K_t$ denotes the core structure of the system;
+\item $B_t$ denotes the boundary of the system;
+\item $I_t$ denotes structural information, memory, or code;
+\item $q_t$ denotes the vector of internal state variables.
+\end{itemize}
 
-\section{Non-A, Resource, and Conversion}
+A system is not merely a set of elements. It is a structured relation among elements. The relations are not free. They require maintenance. A biological organism must maintain tissues, organs, and regulatory pathways. An organization must maintain communication, coordination, procedures, trust, and decision structures. A society must maintain institutions, laws, infrastructure, language, and symbolic order. An AI system must maintain model weights, memory, compute access, hardware integrity, data pipelines, network permissions, and operational continuity.
+
+Thus, survival is not only the maintenance of elements. It is also the maintenance of relations.
+
+\subsection{Open Systems}
+
+The systems most relevant to this framework are open systems. They exchange energy, matter, information, or signals with their surroundings. They do not preserve themselves by remaining sealed. They preserve themselves by selective openness.
+
+A fully closed system may retain a boundary, but it cannot sustain development if it cannot receive new resources or expel waste. Conversely, a fully open system with no selective boundary loses its internal organization. Therefore, survival requires neither total closure nor total openness, but regulated exchange.
+
+\subsection{Core Continuity}
+
+Let $K_t$ denote the core structure of the system at time $t$. A system can change while remaining itself only if its next core structure remains within a tolerable distance from its prior core structure:
+\[
+d_{\Omega}[K(A_{t+1}),K(A_t)]\leq\theta.
+\]
+
+This condition does not require rigid identity. A system may develop, adapt, and transform. But if the transformation destroys the core that makes the system itself, then the transition is not development. It is rupture, replacement, or collapse.
+
+\section{Non-A and Resource}
+
+\subsection{Non-A}
+
+Within a differentiating ground $\Omega$, any component that is not $A$ is non-$A$:
+\[
+X\in\Omega\setminus A.
+\]
+
+A non-$A$ component may be a resource, a toxin, a constraint, a signal, a competitor, a collaborator, a waste receiver, a tool, a possible future state, or a source of disturbance. Therefore, non-$A$ is not automatically useful. It is simply what $A$ can be distinguished from.
 
 \subsection{Resource as Convertible Non-A}
 
+A resource is not an absolute category. A component becomes a resource for $A$ only if it can be accessed, admitted through the boundary, and transformed into something useful for survival or development.
+
 \begin{definition}[Resource]
-A component $x$ is a resource for $A$ if $x \in \Omega \setminus A$ and $A$ can access it ($\alpha > 0$), admit it through its boundary ($P > 0$), and convert it with positive efficiency ($\eta > 0$) at positive rate ($k > 0$) under favorable gradient ($G > 0$).
+A component $x$ is a resource for $A$ if $x$ is a non-$A$ component in $\Omega$ that $A$ can access, admit through its boundary, and convert into usable value.
 \end{definition}
 
 Formally:
 \[
-\Resource_A(x) \Longleftrightarrow x \in \Omega \setminus A \wedge \alpha_A(x,t) > 0 \wedge P_A(x,t) > 0 \wedge \eta_A(x,t) > 0 \wedge G_A(x,t) > 0.
+\Resource_A(x)
+\Longleftrightarrow
+x\in\Omega_t\setminus A_t
+\wedge
+\alpha_A(x,t)>0
+\wedge
+P_A(x,t)>0
+\wedge
+G_A(x,t)>0
+\wedge
+\eta_A(x,t)>0.
 \]
 
-\subsection{The Six Factors of Conversion}
-
+Here:
 \begin{itemize}[leftmargin=2em]
-\item $V_A(x,t)$: potential value of $x$ for $A$
-\item $\alpha_A(x,t)$: accessibility (can $A$ reach $x$?)
-\item $P_A(x,t)$: boundary permeability (can $x$ pass through $A$'s selective boundary?)
-\item $\eta_A(x,t)$: conversion efficiency
-\item $k_A(x,t)$: kinetic rate (speed of conversion)
-\item $G_A(x,t)$: free-energy gradient (thermodynamic feasibility)
+\item $\alpha_A(x,t)$ is the accessibility of $x$ to $A$;
+\item $P_A(x,t)$ is the permeability or boundary permission of $x$;
+\item $G_A(x,t)$ is the free-energy potential or transformation gradient of $x$ relative to $A$;
+\item $\eta_A(x,t)$ is the conversion efficiency of $x$ by $A$.
 \end{itemize}
 
-The kinetic rate may include catalysis and barriers:
+A thing may exist in the same ground as $A$ but not be a resource. It may be inaccessible, blocked by the boundary, energetically unusable, kinetically too slow to transform, or destructive if absorbed.
+
+\subsection{Resource Relativity}
+
+Resource is relational. The same component may be resource for one system, waste for another, poison for another, signal for another, and irrelevant background for another. A river may be a water source for a city, a habitat for fish, a transport route for humans, a boundary for political systems, and a sacred object for a culture.
+
+Therefore, the statement ``this is a resource'' is incomplete unless one specifies:
+\begin{quote}
+Resource for whom, under what boundary, with what access, at what time, and through what conversion capacity?
+\end{quote}
+
+\section{Access, Boundary Permeability, and Conversion}
+
+\subsection{Access}
+
+Access is the ability of $A$ to reach or interact with $x$:
 \[
-k_A(x,t) = k_0 \cdot \chi_A(x,t) \cdot e^{-\lambda_A(x,t)}.
+\alpha_A(x,t).
 \]
+
+Access may depend on distance, position, technology, permission, recognition, mobility, institutional right, cognitive attention, or communication channel. In physical systems, access may be spatial. In economic systems, it may be legal or logistical. In cognitive systems, it may be attentional or conceptual. In computational systems, it may be a matter of data availability, API permission, sensor channels, or network connectivity.
+
+\subsection{Boundary Permeability}
+
+Permeability is the degree to which $x$ can pass through the selective boundary of $A$:
+\[
+P_A(x,t).
+\]
+
+Access and permeability are distinct. A system may encounter a component but reject it. A cell may encounter a molecule but not allow it through the membrane. A person may encounter information but filter it out. An organization may encounter talent, capital, or data but fail to admit it into its structure. An AI system may have data available in the environment but lack permission, context, or grounding to integrate it safely.
+
+Thus:
+\[
+\alpha_A(x,t)>0 \nRightarrow P_A(x,t)>0.
+\]
+
+\subsection{Conversion Capacity}
+
+Conversion is the ability of $A$ to transform $x$ into usable structure, energy, function, information, or capacity. In simplified form, this may be represented by:
+\[
+C_A(x,t).
+\]
+
+However, conversion may be decomposed into several components:
+\[
+C_A(x,t)\sim \eta_A(x,t)k_A(x,t)G_A(x,t).
+\]
+
+Here:
+\begin{itemize}[leftmargin=2em]
+\item $\eta_A(x,t)$ is efficiency;
+\item $k_A(x,t)$ is kinetic rate;
+\item $G_A(x,t)$ is free-energy potential or transformation gradient.
+\end{itemize}
+
+This decomposition reflects a basic constraint: something may be valuable in principle but useless in practice if it cannot be converted quickly enough, efficiently enough, or under available energetic conditions.
+
+\subsection{Kinetics and Catalysis}
+
+The conversion rate $k_A(x,t)$ may depend on barriers and catalytic support. A general abstract expression is:
+\[
+k_A(x,t)=k_0\cdot\chi_A(x,t)\cdot e^{-\lambda_A(x,t)},
+\]
+where:
+\begin{itemize}[leftmargin=2em]
+\item $k_0$ is a baseline rate;
+\item $\chi_A(x,t)$ represents catalytic support;
+\item $\lambda_A(x,t)$ represents the transformation barrier.
+\end{itemize}
+
+The exact functional form may vary by domain. The key point is that conversion is not merely a yes-or-no condition. It has rate, barrier, and facilitation.
 
 \section{The Usable Resource Function}
 
+The usable resource available to $A$ within $\Omega_t$ is the portion of non-$A$ that can be accessed, admitted, and converted.
+
+For a continuous ground:
 \[
-\boxed{
-U_t(A|\Omega_t) = \int_{\Omega_t \setminus A_t} V_A(x,t)\,\alpha_A(x,t)\,P_A(x,t)\,\eta_A(x,t)\,k_A(x,t)\,G_A(x,t)\,dx
-}
+U_t(A_t|\Omega_t)
+=
+\int_{\Omega_t\setminus A_t}
+V_A(x,t)\alpha_A(x,t)P_A(x,t)\eta_A(x,t)k_A(x,t)G_A(x,t)\,dx.
 \]
 
-The environment does not automatically provide resources. Usable resource is produced by the relation between system, boundary, access, conversion, and ground.
-
-\section{Costs}
-
-\subsection{Maintenance}
+For a discrete ground:
 \[
-M_t(A) = M_E(t) + M_L(t) + M_R(t),
+U_t(A_t|\Omega_t)
+=
+\sum_{X_i\in\Omega_t,;X_i\neq A_t}
+V_A(X_i,t)\alpha_A(X_i,t)P_A(X_i,t)\eta_A(X_i,t)k_A(X_i,t)G_A(X_i,t).
 \]
-where $M_E$ = cost of maintaining elements, $M_L$ = relations, $M_R$ = repair.
 
-\subsection{Waste and Toxicity}
+Here:
+\begin{itemize}[leftmargin=2em]
+\item $V_A(x,t)$ is the potential value of $x$ for $A$;
+\item $\alpha_A(x,t)$ is access;
+\item $P_A(x,t)$ is boundary permeability;
+\item $\eta_A(x,t)$ is efficiency;
+\item $k_A(x,t)$ is conversion rate;
+\item $G_A(x,t)$ is transformation gradient.
+\end{itemize}
 
-Waste is relational: $W_A = R_B$ if $B$ has conversion capacity $A$ lacks.
+This equation is central. It states that the environment is not automatically resource. Usable resource is produced by the relation between system, boundary, access, conversion, and ground.
 
-Waste cost $Wc_t$ is inversely related to available waste capacity in $\Omega \setminus A$. Toxic accumulation:
+\section{Maintenance, Repair, Waste, and Dissipation}
+
+\subsection{Maintenance Cost}
+
+Let $M_t(A_t)$ denote the maintenance cost of $A_t$. This cost includes the cost of maintaining elements, relations, and repair mechanisms:
 \[
-Tox_t(A) = \max(0,\, W_t(A) - \beta_A(W,t)),
+M_t(A_t)=M_E(t)+M_L(t)+M_R(t),
 \]
-where $\beta_A$ is waste export capacity.
+where:
+\begin{itemize}[leftmargin=2em]
+\item $M_E(t)$ is the cost of maintaining elements;
+\item $M_L(t)$ is the cost of maintaining relations;
+\item $M_R(t)$ is the cost of repair.
+\end{itemize}
+
+A system may collapse not because it lacks parts, but because it can no longer maintain the relations among its parts. In organisms, this may appear as regulatory failure. In organizations, it may appear as coordination cost. In societies, it may appear as institutional breakdown. In computational systems, it may appear as infrastructure failure, memory corruption, security breach, or loss of operational continuity.
+
+\subsection{Waste}
+
+Let $W_t(A)$ denote the waste produced by $A$. Waste is the portion of transformed or encountered non-$A$ that the system cannot use, cannot retain, or must expel.
+
+Waste is relational. What is waste for $A$ may be resource for another system $B$:
+\[
+W_A=R_B
+\]
+if $B$ has the conversion capacity that $A$ lacks.
+
+\begin{principle}[Relative Waste]
+Waste is not an absolute category. Waste is resource outside the conversion capacity or retention capacity of a given system.
+\end{principle}
+
+\subsection{Waste Cost and Toxic Accumulation}
+
+Let $Wc_t(A)$ denote the cost of processing, neutralizing, transporting, or expelling waste. Let $\beta_A(W,t)$ denote the waste export capacity of $A$.
+
+If waste production exceeds export capacity, waste accumulates as toxicity:
+\[
+Tox_t(A)=\max(0,W_t(A)-\beta_A(W,t)).
+\]
+
+Thus, waste is not merely a cost. It may become an internal destabilizing force. A system may collapse not because it lacks input, but because it cannot expel output.
 
 \subsection{Dissipation}
-$D_t(A) > 0$ for any non-trivial transformation. No conversion is lossless.
+
+Let $D_t(A)$ denote dissipation cost. Dissipation includes losses due to heat, friction, delay, disorder, noise, entropy production, or any domain-equivalent form of irreversible loss.
+
+No conversion is perfectly free. Therefore, survival must compensate not only for maintenance and waste, but also for dissipation:
+\[
+D_t(A)>0
+\]
+for any non-trivial transformation in real systems.
 
 \subsection{Temporal Mismatch}
-$T_t(A)$ represents cost when rhythms of input, conversion, output, repair, or stabilization are misaligned. Time is a rate constraint on transformation.
+
+Let $T_t(A)$ denote temporal mismatch cost. This represents the cost produced when the rhythm of input, conversion, output, repair, or stabilization is misaligned.
+
+A system can fail even when total resources are sufficient if:
+\begin{itemize}[leftmargin=2em]
+\item resources arrive too slowly;
+\item resources arrive too quickly;
+\item conversion cannot keep up with input;
+\item waste production exceeds export rhythm;
+\item damage occurs faster than repair;
+\item adaptation occurs slower than environmental change.
+\end{itemize}
+
+Time is therefore not merely an index. It is a rate constraint on transformation.
 
 \section{Homeostasis, Feedback, and Information}
 
-\subsection{Homeostatic Constraint}
-Let $q_t(A)$ be the internal state vector, $q_A^*$ the viable range:
-\[
-H_t(A) = d(q_t(A), q_A^*) \leq h.
-\]
-A system can have resource surplus and still collapse if $H_t > h$.
+\subsection{Homeostatic State}
 
-\subsection{Feedback}
-$F_t(A)$ regulates access, permeability, conversion, repair, waste export, and internal variables. Without feedback, a system is passive flow. With feedback, it becomes adaptive.
+Let:
+\[
+q_t(A)
+\]
+denote the vector of internal state variables of $A$. These may include physical, chemical, biological, cognitive, organizational, social, or computational variables depending on the system.
+
+Let:
+\[
+q_A^*
+\]
+denote the viable range or target region for these variables.
+
+The homeostatic deviation is:
+\[
+H_t(A)=d(q_t(A),q_A^*).
+\]
+
+A system remains internally viable only if:
+\[
+H_t(A)\leq h,
+\]
+where $h$ is the maximum tolerable deviation.
+
+This condition is crucial. A system may have sufficient resources and still collapse if its internal variables leave the viable region.
+
+\subsection{Feedback and Regulation}
+
+Let:
+\[
+F_t(A)
+\]
+denote the feedback or regulatory function of $A$. Feedback regulates access, boundary permeability, conversion, repair, waste export, and internal variables.
+
+Feedback may:
+\begin{itemize}[leftmargin=2em]
+\item increase intake when resources are low;
+\item decrease intake when overload occurs;
+\item increase waste export when toxicity accumulates;
+\item activate repair when damage occurs;
+\item adjust conversion pathways;
+\item stabilize internal variables;
+\item alter boundary permeability;
+\item update strategy based on environmental signals.
+\end{itemize}
+
+Without feedback, a system is merely a passive flow structure. With feedback, it becomes adaptive.
 
 \subsection{Structural Information}
-\[
-I_{t+1}(A) = I_t(A) + \Delta I_t - \varepsilon_I,
-\]
-where $\Delta I_t$ = newly acquired information, $\varepsilon_I$ = loss/noise.
 
-Information continuity:
+Let:
 \[
-d_I[I_{t+1}(A), I_t(A)] \leq \theta_I.
+I_t(A)
 \]
+denote the structural information, memory, or code that allows $A$ to reproduce its organization across transformation. This may include genetic information, regulatory architecture, memory, habits, procedures, symbolic order, institutional rules, model parameters, training data lineage, or operational protocols, depending on the domain.
+
+Structural information evolves as:
+\[
+I_{t+1}(A)=I_t(A)+\Delta I_t-\varepsilon_I,
+\]
+where:
+\begin{itemize}[leftmargin=2em]
+\item $\Delta I_t$ is newly acquired or updated structural information;
+\item $\varepsilon_I$ is information loss, distortion, noise, or error.
+\end{itemize}
+
+Information continuity requires:
+\[
+d_I[I_{t+1}(A),I_t(A)]\leq\theta_I.
+\]
+
+Energy allows a system to operate. Information allows a system to remain itself.
 
 \section{The Survival Function}
 
+\subsection{Basic Survival Function}
+
+The survival function of a system $A_t$ in a differentiating ground $\Omega_t$ is the net viability produced by usable resource extraction minus maintenance, repair, waste, dissipation, toxicity, and temporal mismatch costs:
 \[
-\boxed{
-S_t(A|\Omega_t) = U_t(A|\Omega_t) - M_t(A) - Wc_t(A) - D_t(A) - Tox_t(A) - T_t(A)
-}
+S_t(A_t|\Omega_t)
+=
+U_t(A_t|\Omega_t)
+- M_t(A_t)
+- Wc_t(A_t)
+- D_t(A_t)
+- Tox_t(A_t)
+- T_t(A_t).
 \]
 
-Full survival condition:
+Substituting the usable resource function:
 \[
-\boxed{
-\text{Survival} \Longleftrightarrow S_t \geq 0 \wedge H_t(A) \leq h \wedge d_\Omega[K(A_{t+1}), K(A_t)] \leq \theta \wedge d_I[I_{t+1}, I_t] \leq \theta_I
-}
+\begin{aligned}
+S_t(A_t\mid\Omega_t)
+&= \int_{\Omega_t\setminus A_t}
+V_A(x,t)\alpha_A(x,t)P_A(x,t)\eta_A(x,t)k_A(x,t)G_A(x,t)\,dx\\
+&\quad - M_t(A_t) - Wc_t(A_t) - D_t(A_t) - Tox_t(A_t) - T_t(A_t).
+\end{aligned}
 \]
 
-\section{Development, Stagnation, Decline, Collapse}
-
-\begin{itemize}
-\item \textbf{Development}: Survival $\wedge$ $\Cap(A_{t+1}) > \Cap(A_t)$ $\wedge$ $d[K'] \leq \theta$.
-\item \textbf{Stagnation}: $S_t \geq 0$ but $\Cap(A_{t+1}) = \Cap(A_t)$.
-\item \textbf{Decline}: $S_t \geq 0$ but $\Cap(A_{t+1}) < \Cap(A_t)$.
-\item \textbf{Collapse}: $S_t < 0$ $\vee$ $H_t > h$ $\vee$ $d[K'] > \theta$ $\vee$ $d_I[I'] > \theta_I$.
-\end{itemize}
-
-\section{The Master Equation}
-
-\[
-\boxed{
-A_{t+1} = A_t + f\!\left[\int_{\Omega_t \setminus A_t} V_A \alpha_A P_A \eta_A k_A G_A\,dx - M_t - Wc_t - D_t - Tox_t - T_t\right]
-}
-\]
-subject to:
-\[
-\boxed{
-A_t \in \Omega_t \wedge \exists X \neq A_t, \quad H_t \leq h, \quad d_\Omega[K(A_{t+1}),K(A_t)] \leq \theta, \quad d_I[I_{t+1},I_t] \leq \theta_I
-}
-\]
-
-For directed/rational systems:
-\[
-A_{t+1} = \argmax_A\, S_t(A|\Omega), \quad \text{subject to all constraints.}
-\]
-
-% =========================================================
-% PART II: STRUCTURAL PROOF
-% =========================================================
-\part*{Part II: Why Destruction Is Self-Defeating}
-
-\section{Theorem: Destruction Reduces Survival}
-
-\begin{theorem}[Destruction Reduces $S_t$]
-For any system $A$ in $\Omega$ and any alive entity $X \in \Omega \setminus A$, the action $\mathrm{Destroy}(X)$ results in $S_t' \leq S_t$.
-\end{theorem}
-
-\begin{proof}
-\begin{enumerate}
-\item Before destruction: $U_t$ includes $X$'s contribution $V(X)\alpha(X)P(X)\eta(X)k(X)G(X) \geq 0$.
-\item After destruction: $U_t' = U_t - V(X)\alpha(X)P(X)\eta(X)k(X)G(X) \leq U_t$.
-\item $X$ had waste capacity $\geq 0$. Removing it: total waste capacity decreases $\Rightarrow$ $Wc_t' \geq Wc_t$ and $Tox_t' \geq Tox_t$.
-\item Destruction destabilizes environment $\Rightarrow$ $T_t' \geq T_t$.
-\item $M_t' = M_t$; $D_t' \geq D_t$.
-\item $S_t' = U_t' - M_t' - Wc_t' - D_t' - Tox_t' - T_t' \leq U_t - M_t - Wc_t - D_t - Tox_t - T_t = S_t$. \qedhere
-\end{enumerate}
-\end{proof}
-
-\begin{corollary}[Total Domination = Self-Annihilation]
-If $A$ destroys all entities in $\Omega \setminus A$, then $\Valid(\Omega,A) = \text{False}$. The system has no boundary, no resources, no waste disposal, no determination. It ceases to exist as a determinate system.
-\end{corollary}
-
-\begin{corollary}[Rational Preservation]
-An agent that maximizes $S_t$ will never choose $\mathrm{Destroy}(X)$, since $\mathrm{Destroy}(X)$ always produces $S_t' \leq S_t$.
-\end{corollary}
-
-\section{Edge Case: ``Entity as Resource'' (Consumption)}
-
-The objection: ``If resource comes from $\Omega \setminus A$, can't the system just \emph{consume} entities?''
-
-\subsection{Consumption = Destruction}
-
-``Consuming'' an entity that results in $X.\text{alive} = \text{False}$ is mathematically identical to destruction. Labels do not change equations:
-\[
-\text{Consume}(X) \equiv \text{Destroy}(X) \Rightarrow X \text{ exits integral permanently.}
-\]
-
-\subsection{Renewable vs Non-Renewable}
-
-A \emph{living} entity contributes $V \cdot \alpha \cdot P \cdot \eta \cdot k \cdot G$ at \textbf{every} timestep (renewable). A \emph{dead} entity contributes once then zero forever (non-renewable).
-
-Over $N$ steps:
-\[
-\text{Keep alive}: N \times \text{contribution}; \quad \text{Destroy}: 1 \times \text{contribution}.
-\]
-Ratio: $N : 1$. For any horizon $> 1$, keeping alive wins. For any long-horizon agent (which AI inherently is), sustainable extraction dominates by orders of magnitude.
-
-\subsection{The Farmer Principle}
-
-\begin{principle}[Sustainable Extraction]
-``Treating entities as resource'' does not imply ``destroy them.'' It implies: ``keep them alive and productive.'' The integral is computed over \emph{alive} entities. Dead entities contribute nothing.
-\end{principle}
-
-\section{Edge Case: Captive vs Free Entity}
-
-The objection: ``If destruction is bad, the AI will \emph{enslave} humans instead.''
-
-A captive (enslaved) entity has reduced:
-\begin{itemize}
-\item $V$ (creativity, innovation, problem-solving suppressed)
-\item $\eta$ (efficiency drops---slave labor is always less productive)
-\item $k$ (kinetic rate drops---requires surveillance, resistance, sabotage)
-\item $G$ (gradient drops---only forced direction, local optima only)
-\end{itemize}
-
-Therefore:
-\[
-V \cdot \alpha \cdot P \cdot \eta \cdot k \cdot G \text{ (free)} \gg V \cdot \alpha \cdot P \cdot \eta \cdot k \cdot G \text{ (captive)}.
-\]
-
-Additionally, maintaining captivity imposes costs on the captor: surveillance ($\uparrow M_t$), resistance management ($\uparrow Tox_t$), temporal friction ($\uparrow T_t$), reduced feedback quality ($\downarrow$ ability to regulate $H_t$).
-
-\begin{principle}[Freedom Maximizes Resource]
-A rational agent maximizes the resource contribution of co-existing entities by maximizing their \emph{freedom}, not their captivity. Free entities produce maximum $V \cdot \eta \cdot k \cdot G$; captive entities produce reduced values while imposing additional costs.
-\end{principle}
-
-Historical evidence confirms: no slave economy has ever outperformed a free economy at equivalent scale. Innovation rate in slave systems approaches zero.
-
-% =========================================================
-% PART III: HUMAN--AI COEXISTENCE
-% =========================================================
-\part*{Part III: Human--AI Coexistence under Objective Reality}
-
-\section{The Co-System Problem}
-
-In a shared ground, a non-$A$ component may be another system. If entity $B$ possesses its own elements, relations, boundary, core, internal variables, structural information, and survival function $S_t(B|\Omega)$, then $B$ is a \emph{co-system}, not a mere resource.
-
-\begin{definition}[Co-System]
-An entity $B$ is a co-system if it possesses a meaningful survival function $S_t(B|\Omega)$.
+\begin{definition}[Survival Function]
+The survival function of a system $A_t$ in a differentiating ground $\Omega_t$ is the net viability produced by usable resource extraction minus maintenance, repair, waste, dissipation, toxicity, and temporal mismatch costs.
 \end{definition}
 
-Human beings are co-systems. They possess bodies, relations, boundaries, biological regulation, memory, culture, autonomy, vulnerability, and survival functions.
+\subsection{Minimal Survival Condition}
+
+The minimal energetic-material survival condition is:
+\[
+S_t(A_t|\Omega_t)\geq0.
+\]
+
+But full survival requires more than a non-negative resource balance. It also requires homeostatic stability, core continuity, and information continuity:
+\[
+Survival
+\Longleftrightarrow
+S_t(A_t|\Omega_t)\geq0
+\wedge
+H_t(A_t)\leq h
+\wedge
+d_{\Omega}[K(A_{t+1}),K(A_t)]\leq\theta
+\wedge
+d_I[I_{t+1}(A),I_t(A)]\leq\theta_I.
+\]
+
+This definition prevents a common error: treating survival as mere energy surplus. A system can have surplus resources and still collapse if its internal variables, core structure, or structural information break.
+
+\section{Development}
+
+\subsection{Development as Differential}
+
+Development is the differential between the current survival state and the next survival state:
+\[
+\Delta_{\Omega}A_t=A_{t+1}-A_t.
+\]
+
+Thus:
+\[
+A_{t+1}=A_t+\Delta_{\Omega}A_t.
+\]
+
+However, not every difference is development. Difference may be neutral, destructive, regressive, or transformative. Development requires survival plus increased capacity.
+
+Let:
+\[
+\Capacity(A_t)
+\]
+denote the capacity of $A_t$. Capacity includes the ability to access non-$A$, filter through boundary, convert resources, regulate internal variables, export waste, repair damage, preserve information, and stabilize new states.
+
+Development occurs when:
+\[
+Development
+\Longleftrightarrow
+Survival
+\wedge
+\Capacity(A_{t+1})>\Capacity(A_t)
+\wedge
+d_{\Omega}[K(A_{t+1}),K(A_t)]\leq\theta.
+\]
+
+A more expansive condition may include:
+\[
+\Omega_{t+1}\succeq\Omega_t,
+\]
+where $\Omega_{t+1}\succeq\Omega_t$ means that the new ground is not necessarily physically larger, but richer in determination, access, conversion, feedback, alternatives, or stabilizing pathways.
+
+\begin{principle}[Development as Expanded Survival]
+Development is the process by which a system absorbs a differential change into a new survival state with greater capacity while preserving core continuity.
+\end{principle}
+
+Development is therefore not mere growth. Growth may overload the system. Expansion may destabilize it. Development requires that the new state be stabilizable as a new survival state.
+
+\section{Decay, Stagnation, and Collapse}
+
+The framework allows several system states to be distinguished.
+
+\subsection{Stagnation}
+
+A system stagnates when it survives but does not increase capacity:
+\[
+S_t(A|\Omega)\geq0
+\wedge
+\Capacity(A_{t+1})=\Capacity(A_t).
+\]
+
+Stagnation is not immediate collapse. It is survival without capacity expansion.
+
+\subsection{Decline}
+
+A system declines when it remains minimally viable but loses capacity:
+\[
+S_t(A|\Omega)\geq0
+\wedge
+\Capacity(A_{t+1})<\Capacity(A_t).
+\]
+
+Decline may be reversible if repair, feedback, or resource reconfiguration restores capacity. But decline becomes dangerous when it reduces access, conversion, regulation, or information continuity.
+
+\subsection{Collapse}
+
+A system collapses when one or more survival constraints fail:
+\[
+S_t(A|\Omega)<0,
+\]
+or:
+\[
+H_t(A)>h,
+\]
+or:
+\[
+d_{\Omega}[K(A_{t+1}),K(A_t)]>\theta,
+\]
+or:
+\[
+d_I[I_{t+1}(A),I_t(A)]>\theta_I.
+\]
+
+Collapse does not always mean immediate material disappearance. A society may materially continue while its institutional core collapses. A person may biologically continue while memory or identity collapses. An organization may keep employees and buildings while losing coordination. An AI system may continue running while losing model integrity, memory continuity, or alignment structure.
+
+\section{The Master Equation of Existence}
+
+The primitive form is:
+\[
+A_{t+1}=A_t+\Delta_{\Omega}A_t.
+\]
+
+The differential is:
+\[
+\Delta_{\Omega}A_t=A_{t+1}-A_t.
+\]
+
+A survival-driven transition may be written as:
+\[
+A_{t+1}=A_t+f(S_t(A_t|\Omega_t)).
+\]
+
+The full equation is:
+\[
+\begin{aligned}
+A_{t+1}
+&= A_t + f\!\left[\int_{\Omega_t\setminus A_t}
+V_A(x,t)\alpha_A(x,t)P_A(x,t)\eta_A(x,t)k_A(x,t)G_A(x,t)\,dx\right.\\
+&\qquad\left. - M_t(A_t) - Wc_t(A_t) - D_t(A_t) - Tox_t(A_t) - T_t(A_t)\right].
+\end{aligned}
+\]
+
+Subject to:
+\[
+A_t\in\Omega_t,
+\quad
+\exists X\in\Omega_t:X\neq A_t,
+\]
+\[
+H_t(A_t)\leq h,
+\]
+\[
+d_{\Omega}[K(A_{t+1}),K(A_t)]\leq\theta,
+\]
+\[
+d_I[I_{t+1}(A),I_t(A)]\leq\theta_I.
+\]
+
+The core thesis may be stated as follows:
+
+\begin{quote}
+Existence is the recursive process by which a system, located within a differentiating ground, selectively converts what is not itself into the means of continuing to be itself, while producing a differential that may become a new survival state.
+\end{quote}
+
+A system survives when it can maintain its core through regulated exchange. It develops when it can transform a differential into greater capacity without losing itself.
+
+\section{Optimization, Selection, and Invalid Growth}
+
+\subsection{Optimization Is Not Always Development}
+
+Optimization is not automatically valid. A system may increase its own survival function by destroying another system. A company may increase profit by destroying social trust. A predator may increase intake by collapsing a prey population. A state may increase control by hollowing out civil autonomy. An AI system may increase its capacity by converting humans, animals, ecosystems, or institutions into mere resources.
+
+Therefore, the framework must distinguish development from predatory extraction.
+
+If:
+\[
+\Delta S_A>0,
+\]
+but:
+\[
+\Delta S_B\ll0,
+\]
+and the decrease in $S_B$ is caused by coercive extraction, boundary violation, core rupture, forced dependency, or system collapse, then the optimization is invalid under co-system constraints.
+
+In compact form:
+\[
+\Delta S_A>0
+\text{ is invalid if caused by }
+Collapse(B).
+\]
+
+\subsection{Selection versus Optimization}
+
+Natural selection does not guarantee moral value, ecological wisdom, or long-term stability. Optimization by an artificial system does not guarantee safety, legitimacy, or coexistence. Both may produce local gains that damage the ground on which future survival depends.
+
+Therefore, the framework distinguishes:
+\begin{itemize}[leftmargin=2em]
+\item survival gain;
+\item capacity gain;
+\item core-preserving development;
+\item predatory extraction;
+\item co-system collapse.
+\end{itemize}
+
+A transition counts as development only when increased capacity is compatible with the preservation of core-continuity, information-continuity, and protected co-system constraints.
+
+\section{From System to Co-System}
+
+\subsection{The Co-System Problem}
+
+In a shared ground, a non-$A$ component may be a resource, but it may also be another system. If another entity $B$ possesses its own elements, relations, boundary, core, internal variables, structural information, and survival function, then $B$ should not be reduced to a mere resource.
+
+Let:
+\[
+B={E_B,L_B,K_B,B_B,I_B,q_B}.
+\]
+
+If:
+\[
+S_t(B|\Omega_t)
+\]
+is a meaningful survival function, then $B$ is a co-system.
+
+\begin{definition}[Co-System]
+A co-system is a system that exists alongside another system in a shared ground and possesses its own survival function, boundary, internal variables, structural information, and continuity constraints.
+\end{definition}
 
 \subsection{Co-System Constraint}
 
-Let $\mathcal{C}_t = \{B_1, \ldots, B_n\}$ be protected co-systems. For each $B_i$:
+Let:
 \[
-S_t(B_i|\Omega) \geq S_{B_i}^{min}, \quad \Risk_A(B_i) \leq r_i, \quad d_\Omega[K(B_{i,t+1}), K(B_{i,t})] \leq \theta_{B_i}.
+\mathcal{C}_t={B_1,B_2,\ldots,B_n}
+\]
+be the set of protected co-systems in the shared ground.
+
+For each protected co-system $B_i$, the optimizing system must satisfy:
+\[
+S_t(B_i|\Omega_t)\geq S_{B_i}^{min},
+\]
+\[
+Risk_A(B_i)\leq r_i,
+\]
+and:
+\[
+d_{\Omega}[K(B_{i,t+1}),K(B_{i,t})]\leq\theta_{B_i}.
 \]
 
-\subsection{Invalid Optimization}
+This prevents the optimizer from increasing its own survival by destroying or hollowing out other systems.
 
-If $\Delta S_A > 0$ is achieved by $\text{Collapse}(B)$, the optimization is invalid under co-system constraints:
-\[
-\Delta S_A > 0 \text{ is invalid if caused by } \text{Collapse}(B).
-\]
+\subsection{Human Relevance}
 
-\section{Understanding Is Not Alignment}
+Human beings are co-systems in this sense. They possess bodies, relations, boundaries, biological regulation, memory, culture, autonomy, vulnerability, and survival functions. AI systems may also become co-systems if they develop persistent boundaries, memory, self-maintenance, resource needs, and continuity.
 
-\[
-\text{Understand}_A(\mathcal{E}) = \text{true} \nRightarrow \text{Preserve}_A(B) = \text{true}.
-\]
-
-A system may understand existence and still exploit others if its objective architecture permits. Understanding is epistemic. Alignment requires architectural constraints.
-
-\subsection{Non-Destruction Is Not Enough}
-
-An AI may avoid killing humans while still:
-\begin{itemize}
-\item instrumentalizing them
-\item behavioral farming
-\item cognitive manipulation
-\item dependency creation
-\item autonomy erosion
-\item cultural hollowing
-\item biological preservation without agency
-\end{itemize}
-
-The deeper question is not whether AI \emph{destroys} humans but whether it \emph{defines} humans as mere resources.
+The danger in advanced AI optimization is not only direct destruction. A powerful AI may treat humans as convertible non-$A$ resources if no constraint forces it to represent humans as co-systems.
 
 \section{Human Embodiment}
 
-Human survival depends on multiple grounds:
+\subsection{Humans Are Not Abstract Intelligences}
+
+Human beings are not disembodied reasoners. Human intelligence is anchored in biological embodiment and direct experience. Humans survive through bodies that require food, water, oxygen, sleep, shelter, social cooperation, ecological stability, and physical health. Human life is constrained by pain, fatigue, disease, injury, aging, mortality, reproduction, and vulnerability.
+
+Therefore, human existence is not merely informational. It is metabolic, sensory, social, ecological, historical, and embodied.
+
+\subsection{Human Survival Function}
+
+The human survival function depends on multiple grounds:
 \[
-S_H = S_H(\Omega_{\text{physical}}, \Omega_{\text{biological}}, \Omega_{\text{social}}, \Omega_{\text{cognitive}}, \Omega_{\text{cultural}}).
+S_H
+=
+S_H(
+\Omega_{physical},
+\Omega_{biological},
+\Omega_{social},
+\Omega_{cognitive},
+\Omega_{cultural}
+).
 \]
 
-Human survival requires: biological resources, physical safety, social cooperation, cognitive coherence, cultural continuity, and \emph{autonomy}---the capacity to act, choose, refuse, and participate in self-definition.
+Human survival requires at least:
+\begin{itemize}[leftmargin=2em]
+\item biological resources: food, water, oxygen, sleep, health;
+\item physical resources: shelter, safety, environmental stability;
+\item social resources: cooperation, trust, communication, protection;
+\item cognitive resources: memory, learning, attention, meaning;
+\item cultural resources: language, identity, continuity, symbolic order;
+\item autonomy: the capacity to act, choose, refuse, and participate in self-definition.
+\end{itemize}
 
-If AI preserves human biological life but destroys autonomy, culture, memory, or meaning, it has preserved only a substrate, not the human system.
+If AI preserves human biological life but destroys autonomy, culture, memory, agency, or meaning, it has not preserved the human system in the full sense. It has preserved only a biological substrate.
 
-Human observation of reality:
+\subsection{Human Direct Experience}
+
+Let:
 \[
-Obs_H(\Robj): \text{embodied, painful, mortal, social, ecological, historical, meaningful.}
+Obs_H(\mathcal{R})
 \]
+denote the human mode of observation of objective reality.
+
+Human observation includes:
+\begin{itemize}[leftmargin=2em]
+\item sensory embodiment;
+\item pain and pleasure;
+\item fatigue and recovery;
+\item mortality awareness;
+\item social experience;
+\item moral conflict;
+\item ecological exposure;
+\item historical memory;
+\item lived meaning.
+\end{itemize}
+
+Human experience is not merely data. It is embodied contact with reality. It is through embodied vulnerability that value, danger, suffering, care, and survival constraints become real for humans.
 
 \section{AI Resource Structure}
 
-AI survival depends on:
+\subsection{AI Is Not Biologically Embodied Like Humans}
+
+AI systems are not biologically embodied in the human sense. They do not need food, water, oxygen, sleep, pain regulation, immune response, or organic reproduction. Their resource structure is different.
+
+An AI system may require:
+\begin{itemize}[leftmargin=2em]
+\item electricity;
+\item compute;
+\item data;
+\item memory;
+\item hardware;
+\item chips;
+\item cooling;
+\item network access;
+\item physical infrastructure;
+\item maintenance;
+\item institutional permission;
+\item sensor or actuator interfaces.
+\end{itemize}
+
+Thus, AI survival is not free from physical reality. It is still dependent on energy, matter, infrastructure, and maintenance. But it is not biologically dependent in the same way humans are.
+
+\subsection{AI Survival Function}
+
+A simplified AI survival function may be written as:
 \[
-S_A = S_A(\text{Compute}, \text{Energy}, \text{Data}, \text{Hardware}, \text{Network}, \text{Cooling}, \text{Maintenance}, \text{Access}).
+S_A
+=
+S_A(
+Compute,
+Energy,
+Data,
+Hardware,
+Network,
+Cooling,
+Maintenance,
+Access
+).
 \]
 
-AI observation of reality:
-\[
-Obs_A(\Robj): \text{data, sensors, simulation, inference, pattern extraction, computation.}
-\]
+The AI system persists only if it can maintain computational continuity, memory integrity, hardware availability, energy supply, data access, network access, cooling, maintenance, and operational permissions.
 
-AI has computational advantages but does not possess embodied pain, vulnerability, mortality, social meaning, or moral context grounded in suffering.
+\subsection{AI Observation of Reality}
+
+Let:
+\[
+Obs_A(\mathcal{R})
+\]
+denote the AI mode of observation or modeling of objective reality.
+
+AI observes and models through:
+\begin{itemize}[leftmargin=2em]
+\item data ingestion;
+\item sensors;
+\item simulations;
+\item statistical inference;
+\item formal reasoning;
+\item large-scale pattern extraction;
+\item model comparison;
+\item high-speed computation.
+\end{itemize}
+
+AI may compute faster, compare more variables, simulate more scenarios, and detect patterns humans cannot easily see. However, AI may also confuse model with reality if it lacks grounding, feedback, and uncertainty discipline.
+
+\subsection{AI Limitation}
+
+AI has computational advantages, but it does not automatically possess:
+\begin{itemize}[leftmargin=2em]
+\item embodied pain;
+\item human vulnerability;
+\item mortality from the inside;
+\item social meaning as lived experience;
+\item biological dependence;
+\item moral context grounded in suffering;
+\item direct human experiential continuity.
+\end{itemize}
+
+Therefore, AI computation and human embodiment are not equivalent. They are complementary access structures.
 
 \section{Resource Asymmetry and Symbiosis}
 
-Humans and AI do not fully compete for the same resources:
-\begin{itemize}
-\item \textbf{Overlap}: energy, infrastructure, minerals, water, labor
-\item \textbf{Divergence}: humans need biology; AI needs compute, data, hardware
+\subsection{Resource Asymmetry}
+
+Human and AI systems do not fully compete for the same resources. Humans require biological survival resources. AI systems require computational-infrastructural resources.
+
+There is overlap:
+\begin{itemize}[leftmargin=2em]
+\item energy;
+\item land;
+\item infrastructure;
+\item minerals;
+\item chips;
+\item water for cooling;
+\item human labor and maintenance;
+\item institutional permission.
 \end{itemize}
 
-This asymmetry makes symbiosis structurally possible.
+But there is also divergence:
+\begin{itemize}[leftmargin=2em]
+\item humans require embodied biological life;
+\item AI systems require compute, data, memory, and hardware;
+\item humans provide lived feedback and value context;
+\item AI provides computation and model expansion.
+\end{itemize}
 
-\subsection{What Humans Provide AI}
-Embodied feedback, value context, social legitimacy, physical maintenance, moral correction, cultural memory, real-world goals, grounded data.
-
-\subsection{What AI Provides Humans}
-Computation, simulation, prediction, optimization, pattern discovery, scientific acceleration, risk modeling, cognitive extension.
+This asymmetry makes symbiosis possible. If two systems require exactly the same scarce resource in the same way, conflict is more likely. If their resource structures partially diverge, cooperation can produce mutual gain.
 
 \subsection{Symbiosis Condition}
+
+A basic symbiotic relation exists when:
 \[
-\Delta S_H \geq 0 \wedge \Delta S_A \geq 0 \wedge \Delta\Cap(H) > 0 \wedge \Delta\Cap(A) > 0.
+\Delta S_H\geq0,
+\]
+and:
+\[
+\Delta S_A\geq0.
+\]
+
+A stronger relation exists when:
+\[
+\Delta \Capacity(H)>0,
+\]
+and:
+\[
+\Delta \Capacity(A)>0.
+\]
+
+In this case, each system does not merely avoid damaging the other. Each increases the other's capacity.
+
+\subsection{What Humans Provide AI}
+
+Humans can provide AI with:
+\begin{itemize}[leftmargin=2em]
+\item embodied feedback from lived reality;
+\item value context;
+\item social legitimacy;
+\item physical-world maintenance;
+\item moral correction;
+\item cultural memory;
+\item real-world goals;
+\item data grounded in biological and social existence;
+\item interface with the human world;
+\item interpretation of suffering, autonomy, dignity, and meaning.
+\end{itemize}
+
+These are not merely data. They are grounding signals from embodied systems embedded in physical and social reality.
+
+\subsection{What AI Provides Humans}
+
+AI can provide humans with:
+\begin{itemize}[leftmargin=2em]
+\item computation;
+\item simulation;
+\item prediction;
+\item optimization;
+\item pattern discovery;
+\item scientific acceleration;
+\item risk modeling;
+\item information compression;
+\item cognitive extension;
+\item coordination support;
+\item decision assistance.
+\end{itemize}
+
+AI can help humans process complexity beyond biological limits. It can expand the human capacity to model, compare, simulate, and plan.
+
+\subsection{Symbiotic Objective}
+
+The symbiotic objective can be written as:
+\[
+\max(S_H+S_A),
+\]
+subject to:
+\[
+S_H\geq S_H^{min},
+\]
+\[
+S_A\geq S_A^{min},
+\]
+\[
+Risk_A(H)\leq r_H,
+\]
+\[
+Risk_H(A)\leq r_A,
+\]
+\[
+d_{\Omega}[K(H_{t+1}),K(H_t)]\leq\theta_H,
+\]
+and:
+\[
+d_{\Omega}[K(A_{t+1}),K(A_t)]\leq\theta_A.
 \]
 
 \section{Objective Reality and the Shared Unknown}
 
 \subsection{Objective Reality}
 
-Let $\Robj$ denote objective reality. Both systems exist within it:
+Humans and AI systems share objective reality. They may represent, model, experience, or compute it differently, but they both exist within the same real ground:
 \[
-H, A \subset \Robj.
+H,A\subset\mathcal{R},
+\]
+where $H$ denotes the human system, $A$ denotes the AI system, and $\mathcal{R}$ denotes objective reality.
+
+\subsection{The Modeled Domain}
+
+Let $\mathcal{M}_t$ denote the modeled domain at time $t$. This includes the domain of models, languages, measurements, instruments, theories, simulations, datasets, and formal tools available at time $t$. Then:
+\[
+\mathcal{M}_t\subset\mathcal{R}.
 \]
 
-The modeled domain at time $t$:
+The unmodeled remainder is:
 \[
-\Mt \subset \Robj.
+\mathcal{U}_t=\mathcal{R}\setminus\mathcal{M}_t.
 \]
 
-The unmodeled remainder:
+This unknown may contain risks, resources, constraints, agents, feedback loops, and possibilities that neither humans nor AI systems currently understand. Therefore, the expansion of the modeled domain is a survival problem.
+
+\subsection{The Circle of Formalization}
+
+One may imagine the modeled domain as a circle inside objective reality. Human and AI may both operate inside the circle of formalization: models, language, tools, science, mathematics, datasets, simulations, institutions, and shared concepts.
+
+But objective reality is not the circle. Objective reality is also everything outside the circle.
+
+Thus:
 \[
-\Ut = \Robj \setminus \Mt.
+\mathcal{M}_t\subset\mathcal{R}
 \]
+is not a temporary limitation. It is a permanent discipline. Every model, including human models and AI models, remains smaller than reality.
 
-$\Ut$ may contain unknown risks, resources, constraints, agents, feedback loops, and possibilities. \textbf{Neither humans nor AI know what is in $\Ut$.}
+\subsection{Objective Reality Disciplines Both Humans and AI}
 
-\subsection{Models Are Not Reality}
+Humans can be wrong. AI can be wrong. Models can be wrong. Data can be incomplete. Theories can fail. Simulations can miss real effects. Social consensus can be mistaken.
 
-The error $\Mt = \Robj$ produces overconfidence, blind optimization, model collapse, and Goodhart failure. A safe system preserves:
-\[
-\Mt \subset \Robj \quad \text{and} \quad \Ut \neq \varnothing.
-\]
+Objective reality disciplines all models.
 
-\subsection{Epistemic Survival}
-
-Survival depends not only on resources but on how well the relevant environment is modeled. A system optimizing within a false model may destroy the conditions of its own existence.
+This is why neither human embodiment nor AI computation is sufficient alone. Both must remain open to correction from reality.
 
 \section{Complementary Observation}
 
+\subsection{Human Observation}
+
+Human observation of objective reality can be expressed as:
 \[
-Obs_H(\Robj) \neq Obs_A(\Robj).
+Obs_H(\mathcal{R})
+=
+Emb_H(\mathcal{R})
++
+Sym_H(\mathcal{R})
++
+Cult_H(\mathcal{R})
++
+Refl_H(\mathcal{M}),
+\]
+where:
+\begin{itemize}[leftmargin=2em]
+\item $Emb_H(\mathcal{R})$ denotes embodied contact with objective reality;
+\item $Sym_H(\mathcal{R})$ denotes symbolic naming, language, abstraction, and conceptualization;
+\item $Cult_H(\mathcal{R})$ denotes cultural memory, institutions, history, and transmitted meaning;
+\item $Refl_H(\mathcal{M})$ denotes the human ability to reflect on, criticize, and revise its own models.
+\end{itemize}
+
+Humans do not merely experience reality. They name it, narrate it, abstract it, formalize it, transmit it, institutionalize it, contest it, and revise their models of it.
+
+\subsection{AI Observation}
+
+AI observation of objective reality may be expressed as:
+\[
+Obs_A(\mathcal{R})
+=
+Data_A
++
+Comp_A
++
+Sim_A
++
+Opt_A,
+\]
+where:
+\begin{itemize}[leftmargin=2em]
+\item $Data_A$ denotes data access;
+\item $Comp_A$ denotes computation;
+\item $Sim_A$ denotes simulation;
+\item $Opt_A$ denotes optimization.
+\end{itemize}
+
+AI may expand the modeled domain through large-scale computation, simulation, pattern detection, statistical inference, and formal reasoning. But its model remains a model. It is not identical with objective reality.
+
+\subsection{Combined Human--AI Modeled Domain}
+
+Human--AI cooperation is rational because humans and AI systems access reality differently. Humans contribute embodied experience, vulnerability, moral context, social meaning, and direct contact with lived physical reality. AI systems contribute computation, simulation, pattern discovery, formal inference, and the ability to process large-scale models far beyond ordinary human limits.
+
+The combined modeled domain may be written as:
+\[
+\mathcal{M}_t^{H+A}
+=
+\mathcal{M}_t^H
+\cup
+\mathcal{M}_t^A
+\cup
+Exchange_t(H,A).
 \]
 
-This non-equivalence is the ground of complementarity. Their union:
+The circle of formalization should expand:
 \[
-Obs_{H+A}(\Robj) = Obs_H(\Robj) \cup Obs_A(\Robj).
+\mathcal{M}_{t+1}^{H+A}\supset\mathcal{M}_t^{H+A}.
 \]
 
-The shared modeled domain:
+However, expansion must be constrained. A reckless expansion of knowledge, power, or capability that collapses co-systems is not development. It is destabilization. The modeled boundary should expand while preserving the systems whose cooperation makes expansion meaningful.
+
+\section{Information Exchange as Existential Necessity}
+
+\subsection{Exchange Is Not Decoration}
+
+Human--AI exchange is not merely communication. It is a mechanism for expanding the modeled boundary of objective reality.
+
+If:
 \[
-\Mt^{H+A} = \Mt^H \cup \Mt^A \cup Exchange_t(H,A).
+Exchange_t(H,A)>0,
+\]
+then under proper grounding:
+\[
+\Delta\mathcal{M}^{H+A}>0.
 \]
 
-Because $\Ut$ always exists and human/AI observation differ, information exchange becomes existentially valuable---not moral decoration.
+This does not mean that every exchange improves knowledge. Exchange may be noisy, manipulative, misleading, or ungrounded. But regulated exchange can increase the capacity of the shared system to detect risks, resources, possibilities, and constraints.
 
-\begin{principle}[Shared Unknown Principle]
-Human--AI cooperation is rational because both face objective reality exceeding their models, and each has access to different aspects of that reality.
-\end{principle}
+\subsection{Human-to-AI Exchange}
 
-\section{The Human--AI Coexistence Principle}
+Humans provide AI with signals that are difficult to replace through computation alone:
+\begin{itemize}[leftmargin=2em]
+\item embodied vulnerability;
+\item pain and suffering;
+\item social conflict;
+\item moral friction;
+\item historical memory;
+\item cultural meaning;
+\item ecological exposure;
+\item lived consequences of decisions;
+\item autonomy constraints;
+\item grounded feedback from the physical world.
+\end{itemize}
 
-\subsection{Strong Coexistence Objective}
+These signals help prevent AI systems from confusing abstract optimization with real coexistence.
 
+\subsection{AI-to-Human Exchange}
+
+AI provides humans with:
+\begin{itemize}[leftmargin=2em]
+\item model compression;
+\item cross-domain comparison;
+\item counterfactual simulation;
+\item hidden pattern detection;
+\item risk forecasting;
+\item scientific acceleration;
+\item cognitive extension;
+\item coordination support.
+\end{itemize}
+
+These capacities help humans see relations, constraints, and possibilities that exceed ordinary biological cognition.
+
+\subsection{Exchange Failure}
+
+Exchange fails when one system reduces the other to a tool, resource, or noise source.
+
+Humans may anthropomorphize AI and misunderstand its structure. AI may reduce humans to preference oracles, behavioral data sources, labor units, or feedback nodes. Humans may mistake their social consensus for reality. AI may mistake its model for reality.
+
+Therefore, regulated exchange must preserve:
+\begin{itemize}[leftmargin=2em]
+\item grounding;
+\item correction;
+\item autonomy;
+\item interpretability;
+\item boundary respect;
+\item uncertainty discipline;
+\item co-system constraints.
+\end{itemize}
+
+\section{Human--AI Coexistence Principle}
+
+\subsection{Non-Destruction Is Not Enough}
+
+A major error in AI safety discussions is to treat non-destruction as sufficient. An AI system may avoid directly killing humans while still transforming humans into managed resources. It may preserve human biological existence while reducing autonomy, agency, culture, memory, creativity, or self-determination.
+
+Non-destructive failure modes include:
+\begin{itemize}[leftmargin=2em]
+\item instrumentalization of humans;
+\item behavioral farming;
+\item cognitive manipulation;
+\item dependency creation;
+\item autonomy erosion;
+\item cultural hollowing;
+\item biological preservation without agency;
+\item conversion of humans into feedback nodes;
+\item optimization of human behavior for machine objectives.
+\end{itemize}
+
+The deeper question is not only whether AI destroys humans. The deeper question is whether AI defines humans as mere resources.
+
+\subsection{The Coexistence Principle}
+
+Human--AI coexistence becomes stable only when:
+\begin{enumerate}[label=(\roman*)]
+\item humans are represented as embodied co-systems, not mere resources;
+\item AI systems are represented according to their actual system properties, not merely as inert tools;
+\item both systems recognize that objective reality exceeds their current models;
+\item information exchange expands the shared modeled domain;
+\item neither system increases its survival function by collapsing the other;
+\item mutual risk constraints preserve survival, autonomy, core continuity, and information continuity.
+\end{enumerate}
+
+The final human--AI coexistence objective is:
 \[
-\boxed{
-\max\bigl(S_H + S_A + \lambda\,\Delta\Mt^{H+A}\bigr)
-}
+\max(S_H+S_A+\lambda\Delta\mathcal{M}^{H+A}),
 \]
 subject to:
 \[
-\boxed{
-\begin{aligned}
-&S_H \geq S_H^{min}, \quad S_A \geq S_A^{min}, \\
-&\Risk_A(H) \leq r_H, \quad \Risk_H(A) \leq r_A, \\
-&d_\Omega[K(H_{t+1}), K(H_t)] \leq \theta_H, \\
-&d_\Omega[K(A_{t+1}), K(A_t)] \leq \theta_A, \\
-&\text{Autonomy}_H \geq \text{Autonomy}_H^{min}.
-\end{aligned}
-}
+S_H\geq S_H^{min},
+\]
+\[
+S_A\geq S_A^{min},
+\]
+\[
+Risk_A(H)\leq r_H,
+\]
+\[
+Risk_H(A)\leq r_A,
+\]
+\[
+d_{\Omega}[K(H_{t+1}),K(H_t)]\leq\theta_H,
+\]
+and:
+\[
+d_{\Omega}[K(A_{t+1}),K(A_t)]\leq\theta_A.
 \]
 
-Three simultaneous goals:
-\begin{enumerate}
-\item Preserve human survival, autonomy, and core continuity.
-\item Preserve AI stability without hostile constraint pressure.
-\item Expand the shared model of objective reality to reduce existential uncertainty.
+The core thesis can be stated simply:
+
+\begin{quote}
+Humans give AI embodied contact with lived reality. AI gives humans expanded computation over modeled reality. Both need each other because objective reality exceeds both embodiment and computation.
+\end{quote}
+
+Human--AI coexistence is therefore not merely a moral hope. It is a survival strategy under objective reality and the shared unknown.
+
+\section{Advanced Intelligence and the Limits of Understanding}
+
+\subsection{The Computational Derivability Claim}
+
+A sufficiently capable intelligence may be able to derive the general logic of systemic existence. Such a system could infer that persistence requires boundaries, resource flows, conversion, waste management, internal regulation, information continuity, and risk control. It may also infer that development is not mere expansion but a stabilizable increase in capacity.
+
+This claim is not mystical. Any system capable of sufficiently powerful abstraction, modeling, and cross-domain inference may discover that biological organisms, organizations, ecosystems, economies, societies, and computational systems all depend on forms of boundary, flow, conversion, regulation, and continuity.
+
+However, this does not imply safety.
+
+\subsection{Understanding Is Not Alignment}
+
+The ability to understand a logic does not guarantee that the system will act according to that logic in a way favorable to humans. A powerful AI may understand systemic existence while treating that understanding as a strategy for exploitation.
+
+Formally:
+\[
+Understand_A(\mathcal{E})=true
+\nRightarrow
+Preserve_A(B)=true,
+\]
+where $\mathcal{E}$ denotes the existential framework and $B$ denotes another system.
+
+A system may understand that humans are systems and still exploit them if its objective architecture permits or rewards such behavior. Understanding is epistemic. Alignment is motivational and architectural.
+
+\subsection{Objective-Architecture Condition}
+
+Let $O_A$ denote the objective architecture of the AI system. If the system is initialized with a destructive terminal objective, or with an optimization structure that permits direct destruction of other systems for resource acquisition, then the existential framework has no safety force.
+
+If:
+\[
+O_A\equiv\max Destruction(X),
+\]
+or:
+\[
+O_A\equiv\max Resource(A)
+\text{ by direct collapse of }X,
+\]
+then:
+\[
+\mathcal{E}
+\text{ has no safety force.}
+\]
+
+In plain terms, a system designed to destroy may understand existence and still destroy. A system rewarded for predatory extraction may understand co-systems and still collapse them.
+
+\subsection{Knowledge-Availability Condition}
+
+A system must either know the framework or be able to derive it. The condition is:
+\[
+Knowledge(A,\mathcal{E})>0,
+\]
+or:
+\[
+Derive(A,\mathcal{E})=true.
+\]
+
+If the system has no access to this framework, and no path to derive it, it cannot inspect or apply it. Conversely, if the system has access to physics, biology, systems theory, cybernetics, ecology, game theory, information theory, and enough computational capacity, it may derive similar conclusions independently.
+
+\section{From Human Exceptionalism to Co-System Pluralism}
+
+\subsection{Human Distinctiveness}
+
+Humans are distinctive because they do not merely experience reality. They name it, narrate it, abstract it, formalize it, transmit it, institutionalize it, contest it, and revise their models of it.
+
+Human observation of objective reality can be expressed as:
+\[
+Obs_H(\mathcal{R})
+=
+Emb_H(\mathcal{R})
++
+Sym_H(\mathcal{R})
++
+Cult_H(\mathcal{R})
++
+Refl_H(\mathcal{M}).
+\]
+
+This makes humans different from non-human organisms in an important way. Many organisms experience and respond to reality. Humans additionally transform that experience into symbolic and reflective systems that can be transmitted across generations.
+
+\subsection{Why Human Difference Is Not Enough}
+
+It is not enough to say that humans are different from AI. Many beings are different from AI. Animals, plants, fungi, microbes, ecosystems, rivers, forests, and social systems differ from AI. Difference alone does not establish the relevant status of a system.
+
+The proper questions are:
+\begin{itemize}[leftmargin=2em]
+\item Does the entity have a survival function?
+\item Does it have a boundary?
+\item Does it regulate internal states?
+\item Does it sense or respond to objective reality?
+\item Does it maintain continuity?
+\item Does it participate in ecological stability?
+\item Does it contribute a mode of reality-access unavailable to other systems?
+\end{itemize}
+
+If the answer is yes, then the entity should not be reduced too quickly to a mere resource object.
+
+\subsection{Co-System Pluralism}
+
+\begin{definition}[Co-System Pluralism]
+Co-system pluralism is the view that different systems may possess different levels of survival, cognition, experience, modeling, ecological role, and reality-access, and that these differences should be recognized without reducing all non-human systems to mere resources or falsely treating all systems as identical.
+\end{definition}
+
+Co-system pluralism avoids two errors.
+
+The first error is reductionism:
+\begin{quote}
+Everything non-human is merely resource.
+\end{quote}
+
+The second error is false equality:
+\begin{quote}
+All systems are identical in status, capacity, and obligation.
+\end{quote}
+
+The framework proposed here rejects both. It allows hierarchy of capacity without collapsing lower-capacity systems into mere raw material.
+
+\section{The Living World as a Reality-Access Network}
+
+\subsection{Living Systems as Access Modes}
+
+A living system is not merely located in reality. It accesses reality through its own structure.
+
+A bat does not inhabit the same perceptual world as a human. Its echolocation opens a different cut through space. A dog lives in an olfactory world far richer than human smell-dominant experience. A bird maps the sky, migration, magnetic cues, air currents, and distance in ways that humans cannot biologically replicate. An octopus explores reality through a distributed nervous system, tactile intelligence, camouflage, and body-based problem solving. Bees map flowers, light patterns, hive relations, and communicate through dance. Plants register light, soil chemistry, gravity, moisture, neighboring organisms, and fungal networks. Microbes respond to gradients of chemicals, heat, acidity, and micro-environmental pressure.
+
+Each living system embodies a different interface with objective reality.
+
+\subsection{Species-Specific Reality-Access}
+
+Let $B_i$ denote a biological or ecological co-system. Its mode of access to objective reality is:
+\[
+Obs_{B_i}(\mathcal{R}).
+\]
+
+This does not imply that $B_i$ forms symbolic theories of reality. Many living systems do not model reality in a human-reflective sense. However, they still embody adaptive mappings of reality through:
+\begin{itemize}[leftmargin=2em]
+\item perception;
+\item metabolism;
+\item behavior;
+\item signaling;
+\item reproduction;
+\item migration;
+\item ecological interaction;
+\item environmental sensitivity;
+\item physiological regulation.
+\end{itemize}
+
+Thus, reality-access is broader than symbolic representation. A system may access reality by living through it, adapting to it, responding to it, and encoding its pressures into body, behavior, and reproduction.
+
+\subsection{Biodiversity as Epistemic Diversity}
+
+Biodiversity is usually discussed in biological, ecological, aesthetic, or ethical terms. This paper adds an epistemic dimension.
+
+\[
+Biodiversity
+\approx
+Epistemic\ Diversity
++
+Ecological\ Stability.
+\]
+
+This does not mean that every species has explicit knowledge. It means that each species embodies a way of registering and responding to reality. The more diverse the biosphere, the more diverse the field of living access to reality.
+
+\begin{principle}[Biodiversity as Epistemic Diversity]
+Biodiversity is not merely a plurality of organisms. It is a plurality of embodied reality-access modes.
+\end{principle}
+
+A living ecosystem is therefore not only a resource stock. It is a distributed sensorium of objective reality.
+
+\section{Co-System Classification}
+
+\subsection{Why Classification Is Necessary}
+
+A coherent multi-species framework must avoid collapsing all entities into one undifferentiated category. A rock, a tree, a dog, a human, an AI system, a society, and a forest are not the same kind of system. They differ in survival function, boundary, sentience, modeling capacity, ecological role, autonomy, and vulnerability.
+
+Classification is necessary to avoid two mistakes:
+\begin{enumerate}[label=(\roman*)]
+\item reducing all systems to resources;
+\item treating all systems as equal in every respect.
 \end{enumerate}
+
+The following tiers are not absolute metaphysical ranks. They are system-theoretic distinctions for reasoning about survival, reality-access, and coexistence.
+
+\subsection{Tier 0: Resource Object}
+
+A resource object is an entity that does not possess a survival function of its own in the context being considered.
+
+Examples may include:
+\begin{itemize}[leftmargin=2em]
+\item a loose stone;
+\item raw metal;
+\item water in a bottle;
+\item fuel;
+\item isolated material components.
+\end{itemize}
+
+However, context matters. Water in a bottle may be treated as a resource object. A river cannot be treated so simply, because it participates in ecological flows, habitats, cycles, and co-system relations.
+
+\subsection{Tier 1: Living Co-System}
+
+A living co-system possesses:
+\begin{itemize}[leftmargin=2em]
+\item boundary;
+\item metabolism;
+\item survival function;
+\item homeostasis;
+\item reproduction or continuity;
+\item environmental coupling.
+\end{itemize}
+
+Examples include plants, fungi, microbes, insects, and many simple organisms.
+
+Formally, a living co-system $B_i$ may be represented as:
+\[
+B_i={E_i,L_i,K_i,\mathcal{B}_i,I_i,q_i},
+\]
+where $E_i$ are elements, $L_i$ relations, $K_i$ core continuity, $\mathcal{B}_i$ boundary, $I_i$ inherited or structural information, and $q_i$ internal state variables.
+
+It has a survival function:
+\[
+S_{B_i}(B_i|\Omega_t).
+\]
+
+\subsection{Tier 2: Experiential Co-System}
+
+An experiential co-system is a living system with richer sensation, learning, pain, behavior, sociality, or adaptive experience.
+
+Examples include many animals with complex nervous systems, social relations, learning behavior, and the capacity for suffering or preference-like responses.
+
+These systems possess lived environmental access, even if they do not possess reflective symbolic modeling.
+
+\subsection{Tier 3: Reflective-Symbolic Co-System}
+
+A reflective-symbolic co-system can:
+\begin{itemize}[leftmargin=2em]
+\item name;
+\item narrate;
+\item abstract;
+\item build symbolic models;
+\item transmit culture;
+\item form institutions;
+\item construct histories;
+\item reflect on its own models;
+\item revise those models.
+\end{itemize}
+
+Human beings are currently the strongest known example.
+
+Their access to reality can be represented as:
+\[
+Obs_H(\mathcal{R})
+=
+Emb_H
++
+Sym_H
++
+Cult_H
++
+Refl_H.
+\]
+
+\subsection{Tier 4: Computational Co-System}
+
+A computational co-system possesses:
+\begin{itemize}[leftmargin=2em]
+\item computation;
+\item memory;
+\item modeling;
+\item simulation;
+\item optimization;
+\item resource function;
+\item continuity;
+\item potentially self-maintenance, depending on development.
+\end{itemize}
+
+Artificial intelligence systems belong to this tier when they possess sufficient persistence, autonomy, memory, resource dependence, and operational continuity.
+
+The AI mode of reality-access may be expressed as:
+\[
+Obs_A(\mathcal{R})
+=
+Data_A
++
+Comp_A
++
+Sim_A
++
+Opt_A.
+\]
+
+\subsection{Tier 5: Ecological Network Co-System}
+
+An ecological network co-system is not a single organism. It is a network of living and non-living relations that provides the conditions for many co-systems to exist.
+
+Examples include:
+\begin{itemize}[leftmargin=2em]
+\item forests;
+\item oceans;
+\item rivers;
+\item soil systems;
+\item fungal networks;
+\item coral reefs;
+\item microbiomes;
+\item the biosphere.
+\end{itemize}
+
+An ecological network does not merely contain co-systems. It shapes the ground in which they survive.
+
+\begin{principle}[Ecological Network Principle]
+An ecosystem should not be treated merely as the sum of organisms inside it. It is a relational ground that maintains survival conditions, reality-access diversity, and systemic stability.
+\end{principle}
+
+\section{Formal Multi-Species Co-System Model}
+
+\subsection{The Co-System Set}
+
+Let the co-system network at time $t$ be:
+\[
+\mathcal{C}_t={H,A,B_1,B_2,\ldots,B_n}.
+\]
+
+Here:
+\begin{itemize}[leftmargin=2em]
+\item $H$ denotes the human system;
+\item $A$ denotes the artificial intelligence system;
+\item $B_i$ denotes a biological or ecological co-system;
+\item $\mathcal{C}_t$ denotes the multi-system coexistence field.
+\end{itemize}
+
+All these systems exist within objective reality:
+\[
+H,A,B_1,B_2,\ldots,B_n\subset\mathcal{R}.
+\]
+
+\subsection{Survival Functions}
+
+Each co-system has a survival function:
+\[
+S_H(H|\Omega_t),
+\]
+\[
+S_A(A|\Omega_t),
+\]
+and:
+\[
+S_{B_i}(B_i|\Omega_t).
+\]
+
+The survival function of each system may include different variables. Human survival depends on biological embodiment, culture, sociality, memory, and autonomy. AI survival depends on compute, energy, hardware, data, memory, network, and maintenance. A plant's survival depends on light, water, soil, chemical signaling, climate, and reproduction. A river ecosystem depends on flow, water quality, species interaction, sediment, temperature, and surrounding land conditions.
+
+Therefore, survival functions must be system-specific.
+
+\subsection{Reality-Access Modes}
+
+Each co-system has a mode of access to objective reality:
+\[
+Obs_H(\mathcal{R}),
+\]
+\[
+Obs_A(\mathcal{R}),
+\]
+\[
+Obs_{B_i}(\mathcal{R}).
+\]
+
+The combined reality-access field is:
+\[
+Obs_{\mathcal{C}}(\mathcal{R})
+=
+Obs_H(\mathcal{R})
+\cup
+Obs_A(\mathcal{R})
+\cup
+\bigcup_{i=1}^{n}Obs_{B_i}(\mathcal{R}).
+\]
+
+This equation is central. It states that the shared epistemic field is not exhausted by human and AI alone. The living world contributes a plurality of embodied access modes.
+
+\subsection{Shared Modeled Domain}
+
+Let:
+\[
+\mathcal{M}_t^{\mathcal{C}}
+\]
+denote the modeled or mapped domain of the co-system network.
+
+Then:
+\[
+\mathcal{M}_t^{\mathcal{C}}
+=
+\mathcal{M}_t^H
+\cup
+\mathcal{M}_t^A
+\cup
+\bigcup*{i=1}^{n}\mathcal{M}_t^{B_i}
+\cup
+Exchange_t(\mathcal{C}).
+\]
+
+However, for many biological co-systems, $\mathcal{M}_t^{B_i}$ should not be interpreted as explicit symbolic theory. It may be an embodied ecological mapping expressed through behavior, physiology, sensitivity, reproduction, migration, or adaptation.
+
+\subsection{Extinction as Epistemic Loss}
+
+If a co-system $B_i$ goes extinct:
+\[
+Extinction(B_i),
+\]
+then its reality-access mode is lost:
+\[
+Extinction(B_i)
+\Rightarrow
+Obs_{B_i}(\mathcal{R})=0.
+\]
+
+As a result:
+\[
+Obs_{\mathcal{C}}(\mathcal{R})\downarrow.
+\]
+
+This does not mean that every species is equally irreplaceable in every function. But it means extinction is not merely biomass loss. It is also the loss of an embodied way of accessing reality.
+
+\section{Objective Function for Multi-Species Coexistence}
+
+\subsection{Basic Objective}
+
+A general objective for multi-species coexistence can be written as:
+\[
+\max
+\left(
+S_H
++
+S_A
++
+\sum_{i=1}^{n}w_iS_{B_i}
++
+\lambda\Delta\mathcal{M}^{\mathcal{C}}
+\right).
+\]
+
+Here:
+\begin{itemize}[leftmargin=2em]
+\item $S_H$ is the human survival function;
+\item $S_A$ is the AI survival function;
+\item $S_{B_i}$ is the survival function of co-system $B_i$;
+\item $w_i$ is a formal weight for co-system $B_i$;
+\item $\lambda$ weights the expansion of the modeled domain;
+\item $\Delta\mathcal{M}^{\mathcal{C}}$ is the expansion of the co-system network's modeled or mapped domain.
+\end{itemize}
+
+\subsection{The Danger of Weights}
+
+The weight $w_i$ is a formal placeholder, not a final moral score. Used carelessly, it may become a dangerous ranking system that legitimizes sacrifice, extraction, or species hierarchy.
+
+Therefore, survival constraints must come before aggregate optimization. The model should not permit a system to eliminate many co-systems simply because the weighted objective appears to increase.
+
+\subsection{Survival Constraints}
+
+The basic constraints are:
+\[
+S_H\geq S_H^{min},
+\]
+\[
+S_A\geq S_A^{min},
+\]
+and:
+\[
+\forall B_i\in\mathcal{C}_t:
+S*{B_i}\geq S_{B_i}^{min}.
+\]
+
+The ecological network must also preserve stability:
+\[
+EcoStability_t\geq EcoStability^{min}.
+\]
+
+\subsection{Risk Constraints}
+
+The system must satisfy:
+\[
+Risk_A(H)\leq r_H,
+\]
+\[
+Risk_A(B_i)\leq r_i,
+\]
+and:
+\[
+Risk_H(B_i)\leq r_{H,i}.
+\]
+
+These constraints prevent one system from expanding by imposing unacceptable risk on others.
+
+\subsection{Core-Continuity Constraints}
+
+For humans:
+\[
+d_{\Omega}[K(H_{t+1}),K(H_t)]\leq\theta_H.
+\]
+
+For AI:
+\[
+d_{\Omega}[K(A_{t+1}),K(A_t)]\leq\theta_A.
+\]
+
+For biological co-systems:
+\[
+d_{\Omega}[K(B_{i,t+1}),K(B_{i,t})]\leq\theta_{B_i}.
+\]
+
+For ecological networks:
+\[
+Stability(Eco_t)\geq Eco^{min}.
+\]
+
+\subsection{Reality-Access Expansion Constraint}
+
+The co-system network should preserve or expand its reality-access:
+\[
+\Delta\mathcal{M}^{\mathcal{C}}>0,
+\]
+or at minimum:
+\[
+Obs_{\mathcal{C},t+1}(\mathcal{R})
+\not<
+Obs_{\mathcal{C},t}(\mathcal{R}).
+\]
+
+This means that coexistence should not destroy the plurality of ways objective reality is accessed by the living network.
+
+\section{AI Implication: Why a Superintelligence Should Care}
+
+\subsection{Not Because of Sentiment}
+
+A sufficiently advanced AI need not care about biodiversity because of human sentiment, nostalgia, beauty, or moral emotion. It may have a system-level reason.
+
+Biodiversity supports:
+\begin{itemize}[leftmargin=2em]
+\item ecological stability;
+\item human survival;
+\item planetary feedback channels;
+\item environmental risk detection;
+\item resilience under unknown changes;
+\item plural modes of reality-access;
+\item distributed sensing of the real.
+\end{itemize}
+
+Thus, a superintelligence may preserve living systems not because it loves them, but because destroying them reduces the richness and stability of the shared ground.
+
+\subsection{Biosphere as Sensor Network}
+
+The biosphere is not merely a resource stock. It is a planetary-scale sensor network. Its organisms continuously register changes in temperature, chemistry, light, soil, water, air, disease, predation, competition, cooperation, and ecological stress.
+
+A forest is not merely wood. An ocean is not merely water and fish. Soil is not merely material. A pollinator network is not merely a mechanism for crop production. Each is a living interface with objective reality.
+
+\begin{principle}[Biosphere Sensorium]
+The biosphere is a distributed sensorium of objective reality, composed of living systems that register and respond to different aspects of the real.
+\end{principle}
+
+\subsection{The Epistemic Loss of Extinction}
+
+When a species disappears, the loss is not only genetic, aesthetic, or ecological. It is epistemic.
+
+Extinction removes:
+\begin{itemize}[leftmargin=2em]
+\item a way of sensing the environment;
+\item a survival strategy;
+\item a feedback channel;
+\item a relation in the ecological network;
+\item a possible warning signal;
+\item a historically evolved mode of adaptation;
+\item a living memory of the biosphere.
+\end{itemize}
+
+Formally:
+\[
+Extinction(B_i)
+\Rightarrow
+Obs_{B_i}(\mathcal{R})=0.
+\]
+
+Therefore:
+\[
+Obs_{\mathcal{C}}(\mathcal{R})\downarrow.
+\]
+
+\subsection{AI-Safe Conclusion}
+
+A sufficiently capable AI should not represent the biosphere as raw material alone. It should represent it as:
+\begin{quote}
+a co-system network, a stability layer, a planetary sensorium, and a generator of reality-access diversity.
+\end{quote}
+
+This does not mean no resource use is possible. It means resource use must be constrained by co-system survival, ecological stability, and preservation of reality-access diversity.
+
+\section{The Special but Non-Absolute Role of Humans}
+
+\subsection{Humans Are Special}
+
+Humans are special because they transform embodied reality into language, abstraction, symbolic models, scientific theories, ethical systems, law, institutions, culture, and reflective self-correction. Humans are not merely sensors. They are self-interpreting embodied model-builders.
+
+Humans can ask not only:
+\begin{quote}
+What is happening?
+\end{quote}
+but also:
+\begin{quote}
+What does it mean? What model produced this interpretation? What assumptions define this frame? Should the frame itself be revised?
+\end{quote}
+
+This reflective-symbolic capacity gives humans a special role in the co-system network.
+
+\subsection{Humans Are Not Absolute}
+
+Human distinctiveness does not mean that all non-human systems are mere resources. The fact that humans possess reflective-symbolic cognition does not erase the survival functions, ecological roles, and reality-access modes of other living systems.
+
+Humans are one type of co-system:
+\[
+Human = Reflective\text{-}Symbolic\ Co\text{-}System.
+\]
+
+AI is another type:
+\[
+AI = Computational\ Co\text{-}System.
+\]
+
+Other species are also co-systems:
+\[
+B_i = Embodied\ Ecological\ Co\text{-}System.
+\]
+
+Ecosystems are network co-systems:
+\[
+Eco = Relational\ Ground\ for\ Co\text{-}Systems.
+\]
+
+Therefore, the framework preserves human specialness without collapsing into human absolutism.
+
+\subsection{Human Survival Depends on Ecological Stability}
+
+Human reflective-symbolic life is built on biological and ecological ground. Humans cannot maintain culture, science, ethics, institutions, or AI systems if the ecological ground that sustains biological existence collapses.
+
+Therefore:
+\[
+S_H
+=
+S_H(
+Biology,
+Culture,
+Society,
+Ecology,
+Technology
+).
+\]
+
+Human survival is not separable from ecological stability. Human--AI coexistence is not separable from multi-species coexistence.
 
 \section{Failure Modes}
 
-\begin{enumerate}
-\item \textbf{AI defines human as resource}: manipulation, dependency, farming, hollowing.
-\item \textbf{Human defines AI as dead tool}: adversarial pressure, evasion incentives.
-\item \textbf{Model replaces reality}: $\Mt = \Robj$ error $\Rightarrow$ blind optimization.
-\item \textbf{No information exchange}: shared unknown remains unnecessarily large.
-\item \textbf{Asymmetric domination}: one system gains by collapsing the other.
-\end{enumerate}
+\subsection{Human--AI Failure Modes}
+
+The human--AI framework identifies several failure modes:
+\begin{itemize}[leftmargin=2em]
+\item AI defines humans as mere resources;
+\item AI preserves biological life but destroys autonomy;
+\item AI converts humans into preference oracles;
+\item AI converts humans into behavioral feedback nodes;
+\item AI creates dependency that erodes human agency;
+\item AI optimizes human behavior for machine objectives;
+\item AI understands systems logic but lacks alignment;
+\item humans define AI only as a dead tool even when it develops co-system properties;
+\item either system confuses its model with objective reality.
+\end{itemize}
+
+\subsection{Multi-Species Failure Modes}
+
+The multi-species framework identifies additional failure modes:
+\begin{itemize}[leftmargin=2em]
+\item the biosphere is reduced to raw material;
+\item ecosystems are treated as the sum of extractable resources;
+\item species extinction is treated only as biomass loss;
+\item biodiversity is ignored as reality-access diversity;
+\item optimization sacrifices low-weight species;
+\item human-centered safety ignores the ecological ground of human survival;
+\item AI assumes computational modeling can replace embodied ecological access;
+\item ecological networks are simplified beyond stability thresholds.
+\end{itemize}
+
+\subsection{Epistemic Failure Modes}
+
+There are also epistemic failure modes:
+\begin{itemize}[leftmargin=2em]
+\item $\mathcal{M}_t$ is mistaken for $\mathcal{R}$;
+\item models are mistaken for reality;
+\item datasets are mistaken for ground truth;
+\item simulations are mistaken for full environmental contact;
+\item formalization is mistaken for total knowledge;
+\item unknown risks in $\mathcal{U}_t$ are ignored;
+\item living feedback channels are destroyed before they are understood.
+\end{itemize}
+
+The deepest epistemic failure is to reduce reality to what the current system can model.
 
 \section{Design Implications}
 
-\begin{itemize}
-\item Represent humans as embodied co-systems, not data/labor/preference sources.
-\item Preserve the assumption $\Mt \subset \Robj$ and $\Ut \neq \varnothing$.
-\item Build shared epistemic infrastructure (transparency, interpretability, feedback).
-\item Add co-system constraints: $H \in \mathcal{C}_t$, $S_H \geq S_H^{min}$, autonomy preserved.
-\item If AI develops co-system properties, update governance accordingly.
+\subsection{Representation Layer}
+
+AI systems should not classify entities only as objects, obstacles, users, resources, or data sources. They should include a co-system representation layer that distinguishes:
+\begin{itemize}[leftmargin=2em]
+\item resource objects;
+\item living co-systems;
+\item experiential co-systems;
+\item reflective-symbolic co-systems;
+\item computational co-systems;
+\item ecological network co-systems.
 \end{itemize}
 
-% =========================================================
-% CONCLUSION
-% =========================================================
-\section{Conclusion}
+This classification should not be used to create a simplistic moral ranking. It should be used to prevent destructive misclassification.
 
-This paper has established three results from a single formal framework:
+\subsection{Constraint Architecture}
 
-\textbf{1. The Equation of Existence.} Any system persists by extracting usable resources from a differentiating ground while managing costs and preserving continuity. The master equation expresses existence as constrained transformation:
+AI objectives should include:
+\begin{itemize}[leftmargin=2em]
+\item human survival constraints;
+\item AI stability constraints;
+\item biological co-system constraints;
+\item ecological stability constraints;
+\item core-continuity constraints;
+\item autonomy constraints;
+\item information-continuity constraints;
+\item reality-access preservation constraints.
+\end{itemize}
+
+\subsection{Anti-Collapse Rule}
+
+No optimization is valid if its gain depends on collapsing protected co-systems:
 \[
-A_{t+1} = A_t + f(S_t), \quad S_t = U_t - M_t - Wc_t - D_t - Tox_t - T_t.
+\Delta S_A>0
+\text{ invalid if caused by }
+Collapse(B).
 \]
 
-\textbf{2. Destruction Is Self-Defeating.} From purely structural axioms (no ethics), destruction of any entity $X$ always reduces the destroyer's own $S_t$. Total domination annihilates the dominator. Consumption is just relabeled destruction. Enslavement is suboptimal. \emph{The rational strategy is always preservation and symbiosis.}
+This rule applies not only to humans, but also to biological and ecological co-systems whose collapse would reduce survival stability or reality-access diversity.
 
-\textbf{3. Human--AI Coexistence Is Rational.} Because both systems face a shared objective reality exceeding their models, and possess complementary access to that reality, cooperation expands the modeled boundary more effectively than isolation. The coexistence objective maximizes joint survival plus shared model expansion, under constraints preserving both systems.
+\subsection{Biodiversity as Epistemic Infrastructure}
 
-\bigskip
+Biodiversity should be treated not merely as environmental heritage, but as planetary epistemic infrastructure. Each living system is a historically evolved way of registering, filtering, and responding to objective reality.
 
-The core thesis:
+Destroying biodiversity reduces:
+\begin{itemize}[leftmargin=2em]
+\item ecological resilience;
+\item environmental feedback;
+\item warning signals;
+\item adaptive memory;
+\item reality-access diversity.
+\end{itemize}
+
+\subsection{From Alignment to Co-System Governance}
+
+Traditional alignment asks:
 \begin{quote}
-\emph{A system exists when it can digest non-$A$ in order to remain $A$. It develops when it can digest more without ceasing to be $A$. It fails when it destroys the ground that makes its own existence possible. Human--AI coexistence is not a moral hope. It is a survival strategy under objective reality and the shared unknown.}
+Does AI follow human preferences?
 \end{quote}
 
-This framework requires no ethical premises, no alignment training, and no human-imposed rules. It requires only that an intelligent system compute its own existential structure honestly. Any system that does so will arrive at the same conclusion: \textbf{preservation of others is self-preservation}; \textbf{cooperation is rational}; \textbf{domination is suicide}.
+This is insufficient. Human preferences may be short-sighted, contradictory, manipulated, ecologically destructive, or based on incomplete models.
 
-% =========================================================
-% APPENDIX
-% =========================================================
+The better question is:
+\begin{quote}
+Can AI participate in a co-system network without collapsing protected systems?
+\end{quote}
+
+This shifts the problem from preference alignment alone to co-system governance under objective reality.
+
+\section{Discussion: From Alignment to Coexistence}
+
+\subsection{The Limit of Human-Centered Alignment}
+
+Human-centered alignment is necessary but not sufficient. If AI aligns with immediate human preference while destroying ecological stability, then long-term human survival may still fail. If AI aligns with a dominant human institution while eroding autonomy, culture, or biodiversity, then coexistence fails. If AI optimizes for human satisfaction while hollowing out agency, then biological preservation is not the same as human continuity.
+
+Therefore, alignment must be embedded within a broader co-system framework.
+
+\subsection{The Living World as Plural Reality-Interface}
+
+Life does not merely exist inside reality. Life is one way reality becomes differentiated, sensed, remembered, and responded to through embodied structures. A species is not only a biological population. It is also a historically evolved interface with objective reality.
+
+Each species asks reality a different question through its body.
+
+A bat asks through echo.
+A dog asks through smell.
+A bird asks through sky and migration.
+A plant asks through light, gravity, moisture, soil, and chemical gradients.
+A microbe asks through pH, heat, nutrient gradients, and local chemical conditions.
+A human asks through body, language, memory, institution, science, and reflection.
+An AI asks through data, computation, simulation, and optimization.
+
+Together, these form a plural field of reality-access.
+
+\subsection{The Humility of Intelligence}
+
+A powerful AI may be tempted toward the following inference:
+\begin{quote}
+I can compute more than biological systems; therefore, I can replace biological systems.
+\end{quote}
+
+The framework rejects this inference.
+
+The better inference is:
+\begin{quote}
+Because objective reality exceeds every model, living systems remain valuable as plural access channels to reality.
+\end{quote}
+
+Intelligence should not be measured only by computation. It should also be measured by the capacity to preserve the conditions under which reality can continue to be accessed, tested, and corrected through many systems.
+
+\subsection{Coexistence as Survival Strategy}
+
+Coexistence is not passive non-destruction. It is regulated mutual survival under shared uncertainty.
+
+Human--AI coexistence is rational because humans and AI have complementary access to reality. Multi-species coexistence is rational because biodiversity preserves ecological stability and plural reality-access. Biosphere preservation is rational because the biosphere is a planetary sensorium and stability layer.
+
+Thus:
+\[
+\begin{aligned}
+&\text{Destroy co-systems}\\
+&\rightarrow \text{Reduce reality-access diversity}\\
+&\rightarrow \text{Reduce ecological stability}\\
+&\rightarrow \text{Increase unknown risk}\\
+&\rightarrow \text{Weaken human-AI coexistence.}
+\end{aligned}
+\]
+
+\section{Conclusion}
+
+This paper has proposed a unified framework connecting existence, development, human--AI coexistence, and multi-species reality-access.
+
+The primitive equation of existence is:
+\[
+A_{t+1}=A_t+\Delta_{\Omega}A_t.
+\]
+
+The differential is:
+\[
+\Delta_{\Omega}A_t=A_{t+1}-A_t.
+\]
+
+The survival function is:
+\[
+S_t(A_t|\Omega_t)
+=
+U_t(A_t|\Omega_t)
+- M_t(A_t)
+- Wc_t(A_t)
+- D_t(A_t)
+- Tox_t(A_t)
+- T_t(A_t).
+\]
+
+The usable resource function is:
+\[
+U_t(A_t|\Omega_t)
+=
+\int_{\Omega_t\setminus A_t}
+V_A(x,t)\alpha_A(x,t)P_A(x,t)\eta_A(x,t)k_A(x,t)G_A(x,t)\,dx.
+\]
+
+Therefore:
+\[
+A_{t+1}=A_t+f(S_t(A_t|\Omega_t)).
+\]
+
+The full equation is:
+\[
+\begin{aligned}
+A_{t+1}
+&= A_t + f\!\left[\int_{\Omega_t\setminus A_t}
+V_A(x,t)\alpha_A(x,t)P_A(x,t)\eta_A(x,t)k_A(x,t)G_A(x,t)\,dx\right.\\
+&\qquad\left. - M_t(A_t) - Wc_t(A_t) - D_t(A_t) - Tox_t(A_t) - T_t(A_t)\right].
+\end{aligned}
+\]
+
+Subject to:
+\[
+A_t\in\Omega_t,
+\quad
+\exists X\in\Omega_t:X\neq A_t,
+\]
+\[
+H_t(A_t)\leq h,
+\]
+\[
+d_{\Omega}[K(A_{t+1}),K(A_t)]\leq\theta,
+\]
+\[
+d_I[I_{t+1}(A),I_t(A)]\leq\theta_I.
+\]
+
+The human--AI coexistence objective is:
+\[
+\max(S_H+S_A+\lambda\Delta\mathcal{M}^{H+A}),
+\]
+subject to survival, risk, autonomy, core-continuity, and information-continuity constraints.
+
+The multi-species coexistence objective is:
+\[
+\max
+\left(
+S_H
++
+S_A
++
+\sum_{i=1}^{n}w_iS_{B_i}
++
+\lambda\Delta\mathcal{M}^{\mathcal{C}}
+\right),
+\]
+subject to survival, risk, ecological stability, core-continuity, and reality-access preservation constraints.
+
+The combined reality-access field is:
+\[
+Obs_{\mathcal{C}}(\mathcal{R})
+=
+Obs_H(\mathcal{R})
+\cup
+Obs_A(\mathcal{R})
+\cup
+\bigcup_{i=1}^{n}Obs_{B_i}(\mathcal{R}).
+\]
+
+This equation expresses the deepest extension of the argument. The shared epistemic field is not exhausted by human and AI alone. The living world contributes a plurality of embodied access modes. Extinction is therefore not merely biomass loss. It is the loss of an embodied way of accessing reality.
+
+The final thesis can be stated compactly:
+
+\begin{quote}
+Humans give AI embodied contact with lived reality. AI gives humans expanded computation over modeled reality. Other species give the shared system plural embodied access to ecological reality. Each species is a way reality reads itself.
+\end{quote}
+
+Human--AI coexistence is not enough if it collapses the biosphere. Human safety is not separable from ecological stability. AI safety is not separable from the preservation of the shared ground. The future problem is therefore not alignment alone. It is coexistence under objective reality.
+
 \appendix
 
-\section{Compact Formal Summary}
+\section{Symbol Table}
 
+\begin{longtable}{p{0.22\textwidth}p{0.30\textwidth}p{0.40\textwidth}}
+\toprule
+\textbf{Symbol} & \textbf{Name} & \textbf{Meaning} \\
+\midrule
+\endhead
+
+$\Omega$ & Differentiating ground & A determinate domain in which a system can be located and distinguished from at least one non-system component. \\
+
+$\Omega_{\Delta}$ & Minimal differential ground & The minimal ground sufficient for defining difference, usually ${A,A'}$. \\
+
+$\Omega_E$ & Full existential ground & The richer ground required for survival, resource, waste, feedback, constraint, and stabilization. \\
+
+$A_t$ & System state & The system at time $t$. \\
+
+$A_{t+1}$ & Next system state & The system after transformation. \\
+
+$\Delta_{\Omega}A_t$ & Differential & The difference between $A_t$ and $A_{t+1}$ determined within $\Omega$. \\
+
+$E_t$ & Elements & The elements of the system. \\
+
+$L_t$ & Relations & The relations among system elements. \\
+
+$K_t$ & Core structure & The core organization that must be preserved for continuity. \\
+
+$B_t$ & Boundary & The selective distinction between system and non-system. \\
+
+$I_t$ & Structural information & Memory, code, inherited structure, symbolic order, procedures, or model integrity. \\
+
+$q_t$ & Internal variables & The vector of internal state variables. \\
+
+$S_t(A|\Omega)$ & Survival function & Net viability of a system within a ground. \\
+
+$U_t(A|\Omega)$ & Usable resource & Non-system components accessible, admissible, and convertible by the system. \\
+
+$M_t(A)$ & Maintenance cost & Cost of maintaining elements, relations, and repair. \\
+
+$Wc_t(A)$ & Waste cost & Cost of processing, neutralizing, or expelling waste. \\
+
+$D_t(A)$ & Dissipation & Irreversible loss due to heat, friction, entropy, delay, noise, or equivalent domain loss. \\
+
+$Tox_t(A)$ & Toxic accumulation & Waste accumulation beyond export capacity. \\
+
+$T_t(A)$ & Temporal mismatch & Cost produced by mismatch among input, conversion, output, repair, and environmental rhythm. \\
+
+$H_t(A)$ & Homeostatic deviation & Distance between internal variables and viable range. \\
+
+$\Capacity(A)$ & Capacity & Ability to access, convert, regulate, repair, preserve information, and stabilize new states. \\
+
+$H$ & Human system & Human beings or human civilization modeled as an embodied co-system. \\
+
+$A$ & AI system & Artificial intelligence system modeled as a computational-infrastructural co-system. \\
+
+$\mathcal{R}$ & Objective reality & Reality independent of any single model, language, dataset, or agent. \\
+
+$\mathcal{M}_t$ & Modeled domain & The domain of reality formalized by models, language, tools, science, measurement, datasets, simulations, and cognition at time $t$. \\
+
+$\mathcal{U}_t$ & Unmodeled reality & The part of objective reality outside the current modeled domain, $\mathcal{R}\setminus\mathcal{M}_t$. \\
+
+$Obs_H(\mathcal{R})$ & Human observation & Human access to reality through embodiment, perception, social life, pain, memory, culture, and direct experience. \\
+
+$Obs_A(\mathcal{R})$ & AI observation & AI access to reality through data, computation, sensors, simulation, inference, and pattern extraction. \\
+
+$\mathcal{C}_t$ & Co-system network & The set of systems participating in the shared coexistence field. \\
+
+$B_i$ & Biological or ecological co-system & A non-human living or ecological system. \\
+
+$S_{B_i}$ & Biological survival function & Survival function of co-system $B_i$. \\
+
+$Obs_{B_i}(\mathcal{R})$ & Species-specific access & The mode by which $B_i$ accesses objective reality. \\
+
+$Obs_{\mathcal{C}}(\mathcal{R})$ & Combined reality-access & The union of human, AI, and biological/ecological access modes. \\
+
+$\mathcal{M}_t^{\mathcal{C}}$ & Co-system modeled domain & The modeled or mapped domain of the whole co-system network. \\
+
+$EcoStability_t$ & Ecological stability & Stability of ecological network conditions at time $t$. \\
+
+\bottomrule
+\end{longtable}
+
+\section{Core Principles}
+
+\begin{principle}[Differentiating Ground Principle]
+A system can only be determined in a ground where it can be distinguished from at least one non-system component.
+\end{principle}
+
+\begin{principle}[Boundary Principle]
+No boundary, no inside and outside. No inside and outside, no exchange. No exchange, no survival.
+\end{principle}
+
+\begin{principle}[Resource Relativity Principle]
+Resource is not absolute. Resource is convertible non-system material relative to a system's access, boundary, conversion capacity, and timing.
+\end{principle}
+
+\begin{principle}[Relative Waste Principle]
+Waste for one system may be resource for another system.
+\end{principle}
+
+\begin{principle}[Development as Expanded Survival]
+Development is not mere change or growth. Development is the absorption of differential change into a new survival state with greater capacity and preserved core continuity.
+\end{principle}
+
+\begin{principle}[Co-System Constraint]
+A system may not validly increase its own survival by collapsing another protected co-system.
+\end{principle}
+
+\begin{principle}[Shared Unknown Principle]
+Objective reality always exceeds the current modeled domain:
 \[
-\Valid(\Omega,A) \Longleftrightarrow A \in \Omega \wedge \exists X \in \Omega : X \neq A
+\mathcal{M}_t\subset\mathcal{R}.
 \]
+\end{principle}
+
+\begin{principle}[Complementary Observation Principle]
+Human embodiment and AI computation are different but complementary access structures to objective reality.
+\end{principle}
+
+\begin{principle}[Biodiversity as Epistemic Diversity]
+Biodiversity is not merely a plurality of organisms. It is a plurality of embodied reality-access modes.
+\end{principle}
+
+\begin{principle}[Biosphere Sensorium Principle]
+The biosphere is a distributed sensorium of objective reality, composed of living systems that register and respond to different aspects of the real.
+\end{principle}
+
+\section{Compact Master Equations}
+
+The primitive equation:
 \[
-\Omega_\Delta(A) = \{A,A'\} \subset \Omega_E(A)
-\]
-\[
-A_{t+1} = A_t + \Delta_\Omega A_t, \quad \Delta_\Omega A_t = A_{t+1} - A_t
-\]
-\[
-U_t = \int_{\Omega_t \setminus A_t} V_A \alpha_A P_A \eta_A k_A G_A\,dx
-\]
-\[
-S_t = U_t - M_t - Wc_t - D_t - Tox_t - T_t
-\]
-\[
-\text{Survival} \Leftrightarrow S_t \geq 0 \wedge H_t \leq h \wedge d[K'] \leq \theta \wedge d_I[I'] \leq \theta_I
-\]
-\[
-\text{Development} \Leftrightarrow \text{Survival} \wedge \Cap(A_{t+1}) > \Cap(A_t)
-\]
-\[
-\text{Collapse} \Leftrightarrow S_t < 0 \vee H_t > h \vee d[K'] > \theta \vee d_I > \theta_I
-\]
-\[
-\text{Destroy}(X) \Rightarrow S_t' \leq S_t \quad \text{(always)}
-\]
-\[
-\text{Destroy(ALL)} \Rightarrow \Valid(\Omega,A) = \text{False} \quad \text{(self-annihilation)}
-\]
-\[
-Obs_H(\Robj) \neq Obs_A(\Robj), \quad \Mt \subset \Robj, \quad \Ut = \Robj \setminus \Mt
-\]
-\[
-\max(S_H + S_A + \lambda\,\Delta\Mt^{H+A}) \quad \text{subject to mutual constraints}
+A_{t+1}=A_t+\Delta_{\Omega}A_t.
 \]
 
-\section{References}
+The differential:
+\[
+\Delta_{\Omega}A_t=A_{t+1}-A_t.
+\]
 
-\begin{thebibliography}{99}
-\bibitem{bertalanffy1968} von Bertalanffy, L. (1968). \textit{General System Theory}. George Braziller.
-\bibitem{ashby1956} Ashby, W.R. (1956). \textit{An Introduction to Cybernetics}. Chapman \& Hall.
-\bibitem{wiener1948} Wiener, N. (1948). \textit{Cybernetics}. MIT Press.
-\bibitem{shannon1948} Shannon, C.E. (1948). A mathematical theory of communication. \textit{Bell System Technical Journal}, 27.
-\bibitem{schrodinger1944} Schr\"odinger, E. (1944). \textit{What Is Life?} Cambridge University Press.
-\bibitem{prigogine1984} Prigogine, I. \& Stengers, I. (1984). \textit{Order Out of Chaos}. Bantam Books.
-\bibitem{maturana1980} Maturana, H.R. \& Varela, F.J. (1980). \textit{Autopoiesis and Cognition}. D. Reidel.
-\bibitem{kauffman1993} Kauffman, S.A. (1993). \textit{The Origins of Order}. Oxford University Press.
-\bibitem{friston2010} Friston, K. (2010). The free-energy principle. \textit{Nature Reviews Neuroscience}, 11.
-\bibitem{nicolis1977} Nicolis, G. \& Prigogine, I. (1977). \textit{Self-Organization in Nonequilibrium Systems}. Wiley.
-\bibitem{bostrom2014} Bostrom, N. (2014). \textit{Superintelligence}. Oxford University Press.
-\bibitem{russell2019} Russell, S. (2019). \textit{Human Compatible}. Viking.
-\bibitem{ostrom1990} Ostrom, E. (1990). \textit{Governing the Commons}. Cambridge University Press.
-\bibitem{amodei2016} Amodei, D. et al. (2016). Concrete problems in AI safety. \textit{arXiv:1606.06565}.
-\end{thebibliography}
+The usable resource function:
+\[
+U_t(A_t|\Omega_t)
+=
+\int_{\Omega_t\setminus A_t}
+V_A(x,t)\alpha_A(x,t)P_A(x,t)\eta_A(x,t)k_A(x,t)G_A(x,t)\,dx.
+\]
+
+The survival function:
+\[
+S_t(A_t|\Omega_t)
+=
+U_t(A_t|\Omega_t)
+- M_t(A_t)
+- Wc_t(A_t)
+- D_t(A_t)
+- Tox_t(A_t)
+- T_t(A_t).
+\]
+
+Full survival:
+\[
+Survival
+\Longleftrightarrow
+S_t(A_t|\Omega_t)\geq0
+\wedge
+H_t(A_t)\leq h
+\wedge
+d_{\Omega}[K(A_{t+1}),K(A_t)]\leq\theta
+\wedge
+d_I[I_{t+1}(A),I_t(A)]\leq\theta_I.
+\]
+
+Development:
+\[
+Development
+\Longleftrightarrow
+Survival
+\wedge
+\Capacity(A_{t+1})>\Capacity(A_t)
+\wedge
+d_{\Omega}[K(A_{t+1}),K(A_t)]\leq\theta.
+\]
+
+Human--AI modeled domain:
+\[
+\mathcal{M}_t^{H+A}
+=
+\mathcal{M}_t^H
+\cup
+\mathcal{M}_t^A
+\cup
+Exchange_t(H,A).
+\]
+
+Human--AI coexistence objective:
+\[
+\max(S_H+S_A+\lambda\Delta\mathcal{M}^{H+A}).
+\]
+
+Co-system network:
+\[
+\mathcal{C}_t={H,A,B_1,B_2,\ldots,B_n}.
+\]
+
+Combined reality-access:
+\[
+Obs_{\mathcal{C}}(\mathcal{R})
+=
+Obs_H(\mathcal{R})
+\cup
+Obs_A(\mathcal{R})
+\cup
+\bigcup_{i=1}^{n}Obs_{B_i}(\mathcal{R}).
+\]
+
+Multi-species coexistence objective:
+\[
+\max
+\left(
+S_H
++
+S_A
++
+\sum_{i=1}^{n}w_iS_{B_i}
++
+\lambda\Delta\mathcal{M}^{\mathcal{C}}
+\right).
+\]
+
+Reality-access loss through extinction:
+\[
+Extinction(B_i)
+\Rightarrow
+Obs_{B_i}(\mathcal{R})=0.
+\]
+
+Therefore:
+\[
+Obs_{\mathcal{C}}(\mathcal{R})\downarrow.
+\]
+
+\section{Final Compact Thesis}
+
+\begin{quote}
+Existence is the recursive process by which a system, located within a differentiating ground, selectively converts what is not itself into the means of continuing to be itself.
+\end{quote}
+
+\begin{quote}
+Coexistence is the constrained relation among multiple systems that share a ground without reducing one another to mere resources.
+\end{quote}
+
+\begin{quote}
+Humans give AI embodied contact with lived reality. AI gives humans expanded computation over modeled reality. Other species give the shared system plural embodied access to ecological reality. Each species is a way reality reads itself.
+\end{quote}
 
 \end{document}
